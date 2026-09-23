@@ -42,8 +42,8 @@ def eq(where, a, b, field):
 
 # ---------------------------------------------------------------- inputs
 man = json.load(open(OUT / "analysis_manifest.json"))
-fm = json.load(open(DESC / "frozen_grid_manifest.json"))
-eq("input", H(DESC / "frozen_grid_manifest.json"), "fba6a4617558b64bec61cee18e2a0b63e9457a03c6a3d94cd8e1a1916527dfa8", "sha256 frozen_grid_manifest")
+fm = json.load(open(DESC / "frozen_grid_manifest_public.json"))
+eq("input", H(DESC / "frozen_grid_manifest_public.json"), "30ad583d7b3af45a3ae62fd182c0a1a575af8a1202ee6d1a7a285b26dce4149e", "sha256 frozen_grid_manifest_public")
 eq("input", H(DESC / "authoritative_records.jsonl"), "97c8ca960e0f349dda121515fb45855e9c8787cc8a5cc35a0ce292c1d214a18a", "sha256 authoritative_records")
 for ds, info in fm["manifests"].items():
     eq("input", H(BASE / "manifests" / info["file"]), info["file_sha256"], f"sha256 {ds} manifest")
