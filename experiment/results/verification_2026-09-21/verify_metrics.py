@@ -8,10 +8,10 @@ import json, os, csv, collections
 from fractions import Fraction as Q
 from decimal import Decimal, getcontext
 getcontext().prec = 60
-BASE = os.path.expanduser("~/mnt/anxiosense/evaluation/publication_experiments")
+BASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 F = os.path.join(BASE, "results/descriptive_2026-09-21"); V = os.path.join(BASE, "results/verification_2026-09-21")
 LABELS = {"dreaddit": [0, 1], "goemotions": ["anxiety", "fear", "sadness", "frustration", "non_distress"]}
-fm = json.load(open(os.path.join(F, "frozen_grid_manifest.json")))
+fm = json.load(open(os.path.join(F, "frozen_grid_manifest_public.json")))
 
 def qf(x): return float(x)          # correctly rounded
 def qsqrt(q):

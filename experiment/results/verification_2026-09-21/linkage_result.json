@@ -1,6 +1,7 @@
 {
   "records": 100350,
   "bad_json_lines": 0,
+  "parsed_source_verification_performed": false,
   "cells": 150,
   "manifest_cells": 150,
   "manifest_totals": {

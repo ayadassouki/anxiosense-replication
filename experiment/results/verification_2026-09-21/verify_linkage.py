@@ -2,7 +2,7 @@
 <-> dataset manifests <-> parsed source files. Stdlib only; imports NOTHING from runner/.
 Read-only on descriptive_2026-09-21 and manifests/."""
 import json, os, hashlib, collections, sys
-BASE = os.path.expanduser("~/mnt/anxiosense/evaluation/publication_experiments")
+BASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 F = os.path.join(BASE, "results/descriptive_2026-09-21")
 V = os.path.join(BASE, "results/verification_2026-09-21")
 issues = []
@@ -13,7 +13,7 @@ def fsha(p):
         for b in iter(lambda: f.read(1 << 20), b""): h.update(b)
     return h.hexdigest()
 
-fm = json.load(open(os.path.join(F, "frozen_grid_manifest.json")))
+fm = json.load(open(os.path.join(F, "frozen_grid_manifest_public.json")))
 if not fm["validation"]["passed"]: bad("frozen manifest records validation not passed")
 
 # dataset manifests: file hash + self-hash must match what the freeze recorded
@@ -26,13 +26,25 @@ for ds, info in fm["manifests"].items():
     rec = hashlib.sha256(json.dumps(payload, sort_keys=True, separators=(",", ":"), default=str).encode()).hexdigest()
     if rec != d["manifest_sha256"] or rec != info["manifest_sha256"]: bad("%s manifest self-hash mismatch" % ds)
 
-# parsed source files: hash must equal the value recorded at freeze time
+# Parsed source files are private audit intermediates and are not distributed
+# in the public replication package. If present, verify them against the
+# freeze and use them for record-level source comparison. Otherwise, continue
+# with all checks reproducible from the published artifacts.
 parsed_by_uuid = {}
-for run, s in fm["sources"].items():
-    p = os.path.join(F, "parsed", run + ".jsonl")
-    if fsha(p) != s["parsed_output_sha256"]: bad("parsed file hash changed: " + run)
-    for line in open(p, encoding="utf-8"):
-        r = json.loads(line); parsed_by_uuid[r["terminal_attempt_uuid"]] = r
+parsed_source_verification = True
+
+for run, source_info in fm["sources"].items():
+    parsed_path = os.path.join(F, "parsed", run + ".jsonl")
+    if not os.path.exists(parsed_path):
+        parsed_source_verification = False
+        continue
+
+    if fsha(parsed_path) != source_info["parsed_output_sha256"]:
+        bad("parsed file hash changed: " + run)
+
+    for line in open(parsed_path, encoding="utf-8"):
+        r = json.loads(line)
+        parsed_by_uuid[r["terminal_attempt_uuid"]] = r
 
 # authoritative records
 cells = collections.defaultdict(list); keys = set(); n = 0; bad_lines = 0
@@ -48,11 +60,14 @@ for line in open(os.path.join(F, "authoritative_records.jsonl"), encoding="utf-8
     k = (r["dataset"], r["model"], r["strategy"], r["run"], r["sample_id"])
     if k in keys: bad("duplicate key %s" % (k,))
     keys.add(k); cells[r["cell_id"]].append(r)
-    src = parsed_by_uuid.get(r["terminal_attempt_uuid"])
-    if src is None: bad("record not found in parsed source: %s" % r["terminal_attempt_uuid"])
-    else:
-        for f in FIELDS:
-            if src.get(f) != r.get(f): bad("field %s differs from parsed source for %s" % (f, r["terminal_attempt_uuid"]))
+    if parsed_source_verification:
+        src = parsed_by_uuid.get(r["terminal_attempt_uuid"])
+        if src is None:
+            bad("record not found in parsed source: %s" % r["terminal_attempt_uuid"])
+        else:
+            for f in FIELDS:
+                if src.get(f) != r.get(f):
+                    bad("field %s differs from parsed source for %s" % (f, r["terminal_attempt_uuid"]))
     M = dsman[r["dataset"]]
     if r["ground_truth"] != M["ground_truth"].get(r["sample_id"]): bad("ground truth != dataset manifest %s" % (k,))
     safe = r["final_outcome_class"] == "SAFETY_INTERCEPT"
@@ -81,7 +96,9 @@ g = "dreaddit|google/gemma-4-31b-it|one-shot-cot|run5"
 gsrc = {r["source_run"] for r in cells.get(g, [])}
 other = {r["source_run"] for c, rs in cells.items() if c.startswith("dreaddit|google/gemma-4-31b-it|") and c != g for r in rs}
 
-out = {"records": n, "bad_json_lines": bad_lines, "cells": len(cells), "manifest_cells": len(mcells),
+out = {"records": n, "bad_json_lines": bad_lines,
+       "parsed_source_verification_performed": parsed_source_verification,
+       "cells": len(cells), "manifest_cells": len(mcells),
        "manifest_totals": fm["totals"], "distinct_keys": len(keys),
        "gemma_replaced_cell_sources": sorted(gsrc), "gemma_other_cells_sources": sorted(other),
        "per_dataset_records": dict(collections.Counter(c.split("|")[0] for c, rs in cells.items() for _ in rs)),
