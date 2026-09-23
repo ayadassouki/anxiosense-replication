@@ -5,7 +5,7 @@ on the FROZEN AnxioSense publication grid. Design: STATISTICAL_ANALYSIS_PLAN.md,
 
 INPUTS (read-only, sha256-checked against frozen values before anything is computed)
   results/descriptive_2026-09-21/authoritative_records.jsonl   100,350 scored records (the only data source)
-  results/descriptive_2026-09-21/frozen_grid_manifest.json      cells, composition rule, per-cell record hashes
+  results/descriptive_2026-09-21/frozen_grid_manifest_public.json      cells, composition rule, per-cell record hashes
   results/descriptive_2026-09-21/per_run_results.csv, aggregate_results.csv   (cross-check only)
   manifests/official_dreaddit_test.json, manifests/goemotions_715_subset_2026-09-09.json (ground truth)
 
@@ -46,7 +46,7 @@ DESC = RES / "descriptive_2026-09-21"
 # ---------------------------------------------------------------- frozen expectations
 EXPECTED_SHA256 = {   # values recorded in the frozen descriptive results / grid manifest
     DESC / "authoritative_records.jsonl": "97c8ca960e0f349dda121515fb45855e9c8787cc8a5cc35a0ce292c1d214a18a",
-    DESC / "frozen_grid_manifest.json": "fba6a4617558b64bec61cee18e2a0b63e9457a03c6a3d94cd8e1a1916527dfa8",
+    DESC / "frozen_grid_manifest_public.json": "30ad583d7b3af45a3ae62fd182c0a1a575af8a1202ee6d1a7a285b26dce4149e",
     DESC / "per_run_results.csv": "6b3f374a0e76d2c8068c06cc077a2affadd1cd15ac91aab027efeb591efe86ec",
     DESC / "aggregate_results.csv": "4242c3634c8939714eb0b7ff25b446783f1747add91c36040a95bf02f1646768",
 }
@@ -81,7 +81,7 @@ def fail(msg):
 # ================================================================ 1. integrity checks
 for p, h in EXPECTED_SHA256.items():
     if sha256(p) != h: fail(f"sha256 mismatch for {p}")
-fm = json.load(open(DESC / "frozen_grid_manifest.json"))
+fm = json.load(open(DESC / "frozen_grid_manifest_public.json"))
 for ds, info in fm["manifests"].items():
     if sha256(BASE / "manifests" / info["file"]) != info["file_sha256"]: fail(f"dataset manifest hash {ds}")
 
