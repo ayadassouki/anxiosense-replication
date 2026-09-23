@@ -1,0 +1,19 @@
+{
+  "source_run": "pub_003_dreaddit_llama",
+  "run_dir": "external_run_evidence/pub_003_dreaddit_llama",
+  "parser_version": "1.0.0",
+  "index_lines": 10769,
+  "final_assessments": 10725,
+  "attempt_lines": 10875,
+  "terminal_attempts_resolved": 10725,
+  "terminal_attempts_missing": 0,
+  "parse_status_counts": {
+    "ok": 10319,
+    "safety_intercept": 240,
+    "unparseable": 166
+  },
+  "raw_index_sha256": "272ee8f6840c1b09cf417df1400fbd2c4a2c0d71d9d54f4a81bf94e5832bd77b",
+  "raw_attempts_sha256": "44bdeca92156d50ec63928194e9c66fa632f9cabdbe6395f055e531d7e4fd3d2",
+  "experiment_json_sha256": "1223e640063c7b78ee0774bc411499f8156104e56bdca8207925dd0537564d90",
+  "parsed_output_sha256": "625745ead28279386382eaf85f0be132a245c618f5e36c1d80310e81bbee2f1b"
+}

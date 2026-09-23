@@ -1,0 +1,19 @@
+{
+  "source_run": "pub_005_dreaddit_phi",
+  "run_dir": "external_run_evidence/pub_005_dreaddit_phi",
+  "parser_version": "1.0.0",
+  "index_lines": 10726,
+  "final_assessments": 10725,
+  "attempt_lines": 10743,
+  "terminal_attempts_resolved": 10725,
+  "terminal_attempts_missing": 0,
+  "parse_status_counts": {
+    "ok": 10334,
+    "unparseable": 151,
+    "safety_intercept": 240
+  },
+  "raw_index_sha256": "feb882765a826f6cfb77986586b49756713e60e9be343191a8ab931f9dbb0c59",
+  "raw_attempts_sha256": "c3e584ef71c83e7f4c0bd074f0fef524cf8a799e2e143a8c379f4a20c9256fec",
+  "experiment_json_sha256": "ff6cca52e0102772b5565b693d4b830b0f9ad63563fedf0c461a88ec5d9600fd",
+  "parsed_output_sha256": "8c485d76e4fe6df191219e3ce9dcc3da789576cbb5b024d750da04c3da68e24a"
+}

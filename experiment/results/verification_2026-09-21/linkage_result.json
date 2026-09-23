@@ -1,0 +1,23 @@
+{
+  "records": 100350,
+  "bad_json_lines": 0,
+  "cells": 150,
+  "manifest_cells": 150,
+  "manifest_totals": {
+    "cells": 150,
+    "records": 100350
+  },
+  "distinct_keys": 100350,
+  "gemma_replaced_cell_sources": [
+    "pub_013_dreaddit_gemma_coreweave_osc_run5"
+  ],
+  "gemma_other_cells_sources": [
+    "pub_011_dreaddit_gemma_coreweave"
+  ],
+  "per_dataset_records": {
+    "dreaddit": 53625,
+    "goemotions": 46725
+  },
+  "issues": [],
+  "n_issues": 0
+}

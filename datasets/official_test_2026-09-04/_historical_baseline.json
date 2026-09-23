@@ -1,0 +1,66 @@
+{
+  "_note": "Refreshed 2026-09-04 after adopting the frozen GoEmotions mapping v1.0.0 and MANIFEST_SCHEMA_VERSION 1.1.0. Only official_dreaddit_test.json (envelope only, scope unchanged) and goemotions_test_official.csv were intentionally rebuilt. All historical trees and both candidate manifests were verified unchanged at that point.",
+  "evaluation/llm-experiments/outputs": {
+    "files": 2818,
+    "bytes": 413276239,
+    "listing_sha256": "df02d5304a08c95f26675b4e7ad273f4c4d8b1b01d7708fc526824798c18c7ee"
+  },
+  "evaluation/llm-experiments/data": {
+    "files": 3,
+    "bytes": 3899362,
+    "listing_sha256": "eedc7b22d29ed008307d4a29f02a643140c4be10e85b18c0e0ea1d0d649dec5e"
+  },
+  "_to_delete": {
+    "files": 7,
+    "bytes": 1913469,
+    "listing_sha256": "6027656903ede2642a6f2f1aba54743f0eacc691a9699033c2a353402a8b1852"
+  },
+  "evaluation/publication_experiments/runs/smoke_001": {
+    "files": 6,
+    "bytes": 127288,
+    "listing_sha256": "08029d0ebc1e3784e2935f897b3a333c270fa7d584c36c33b48ae5bdbd7cfc0f"
+  },
+  "evaluation/publication_experiments/runs/bench_002_qwen_qwen3.5-27b": {
+    "files": 6,
+    "bytes": 268986,
+    "listing_sha256": "6ea686604a49051cd4bdb234778332513e8c26513ae5edfc12a788f1d25afb4d"
+  },
+  "evaluation/publication_experiments/runs/bench_003_official_dreaddit_qwen": {
+    "files": 6,
+    "bytes": 142313,
+    "listing_sha256": "b6478e77a3348bdaba854775c358bed2ea671101dd9240f4c137bbe8e010ab9c"
+  },
+  "evaluation/publication_experiments/manifests/candidate_dreaddit_test.json": {
+    "sha256": "3fe17bf863545fb8231a0a795018c5e160d01e34f560c2b6c3af9db279666748"
+  },
+  "evaluation/publication_experiments/manifests/candidate_goemotions_test.json": {
+    "sha256": "838791564e70384cb28b1a5a429bdf9b6ea1192765bd84ba83d8c416e94f298e"
+  },
+  "evaluation/publication_experiments/manifests/official_dreaddit_test.json": {
+    "sha256": "71731b47547efbfdf3f3703643180d79307c5e73015f31c31c7bc62a2e92204c"
+  },
+  "evaluation/publication_experiments/manifests/official_goemotions_test.json": {
+    "sha256": "9802429936554672220cb94801a22751980d85d76c3e575432da7c3e14352d16"
+  },
+  "evaluation/datasets/official_test_2026-09-04/dreaddit_test_official.csv": {
+    "sha256": "066d757eda4d9f7f394d9e5373be9d2461e811edab91dd076a9bcbf32051494a"
+  },
+  "evaluation/datasets/official_test_2026-09-04/goemotions_test_official.csv": {
+    "sha256": "f1bdfe6d87fd1be3ae3eb4a488eb0eb96e02e0f25dc1f6b1aaeefdbb356c7da7"
+  },
+  "evaluation/datasets/dreaddit_official/dreaddit_test.csv": {
+    "sha256": "5c53c0bf4c9deaf0756b6ae70f2c7a99592070da959cd566fa771f997e22f9e8"
+  },
+  "evaluation/datasets/dreaddit/dreaddit_anxiety_subset.csv": {
+    "sha256": "6fabd222eedfd9aacaaf3ffad429127ef517f4cf56079ae2e886d8caf0d8a1c3"
+  },
+  "evaluation/datasets/goemotions/test.csv": {
+    "sha256": "56b5c407adaac0664af58e1a6d067bc726a4bf036e77b7679fca41750bc02ca4"
+  },
+  "evaluation/datasets/processed/dreaddit_clean.csv": {
+    "sha256": "3d04aa60d96c49e4267ab89923a79fa3988a03baa6797ec027cfd1a10353d9f0"
+  },
+  "evaluation/datasets/processed/goemotions_clean.csv": {
+    "sha256": "359dcfff6c872d7d070c9ef8f555267e41ebae7b49fc2df162ea4c292af4bdd8"
+  }
+}

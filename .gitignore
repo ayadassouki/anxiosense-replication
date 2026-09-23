@@ -1,0 +1,37 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+venv/
+.venv/
+node_modules/
+
+*.db
+*.db-*
+*.duckdb
+*.duckdb.*
+*.sqlite
+*.sqlite3
+
+*.zip
+*.tar
+*.tar.gz
+
+runs/
+raw/
+parsed/
+
+*.log
+
+# Private provenance artifact — contains historical local machine paths
+experiment/results/descriptive_2026-09-21/frozen_grid_manifest.json
+
+# Dreaddit text data is not redistributed in the public replication package
+datasets/dreaddit_source/dreaddit_test.csv
+datasets/official_test_2026-09-04/dreaddit_test_official.csv
