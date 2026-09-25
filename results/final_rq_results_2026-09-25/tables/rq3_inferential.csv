@@ -1,0 +1,19 @@
+dataset,strategy,metric,frozen_family,n_hypotheses_in_family,n_pairs_this_strategy,n_raw_p_lt_0.05,n_ci_excludes_zero,n_holm_significant,min_p_holm,what_this_tests,strategy_vs_strategy_test_available
+dreaddit,zero-shot,acc_eff,RQ1-primary-dreaddit,60,10,6,6,0,2.12e-01,model-vs-model WITHIN this strategy,NONE in the frozen inferential package
+dreaddit,zero-shot,macro_f1,RQ1-primary-dreaddit,60,10,6,6,6,6.00e-03,model-vs-model WITHIN this strategy,NONE in the frozen inferential package
+dreaddit,zero-shot,majority_vote_correctness (McNemar),RQ1-mcnemar-dreaddit,30,10,6,,3,2.23e-03,model-vs-model WITHIN this strategy (secondary),NONE in the frozen inferential package
+dreaddit,zero-shot-cot,acc_eff,RQ1-primary-dreaddit,60,10,9,9,7,6.00e-03,model-vs-model WITHIN this strategy,NONE in the frozen inferential package
+dreaddit,zero-shot-cot,macro_f1,RQ1-primary-dreaddit,60,10,9,9,8,6.00e-03,model-vs-model WITHIN this strategy,NONE in the frozen inferential package
+dreaddit,zero-shot-cot,majority_vote_correctness (McNemar),RQ1-mcnemar-dreaddit,30,10,9,,6,5.01e-11,model-vs-model WITHIN this strategy (secondary),NONE in the frozen inferential package
+dreaddit,one-shot-cot,acc_eff,RQ1-primary-dreaddit,60,10,8,8,6,6.00e-03,model-vs-model WITHIN this strategy,NONE in the frozen inferential package
+dreaddit,one-shot-cot,macro_f1,RQ1-primary-dreaddit,60,10,8,8,6,6.00e-03,model-vs-model WITHIN this strategy,NONE in the frozen inferential package
+dreaddit,one-shot-cot,majority_vote_correctness (McNemar),RQ1-mcnemar-dreaddit,30,10,7,,6,1.01e-05,model-vs-model WITHIN this strategy (secondary),NONE in the frozen inferential package
+goemotions,zero-shot,acc_eff,RQ1-primary-goemotions,60,10,9,9,7,6.00e-03,model-vs-model WITHIN this strategy,NONE in the frozen inferential package
+goemotions,zero-shot,macro_f1,RQ1-primary-goemotions,60,10,2,1,0,7.42e-01,model-vs-model WITHIN this strategy,NONE in the frozen inferential package
+goemotions,zero-shot,majority_vote_correctness (McNemar),RQ1-mcnemar-goemotions,30,10,7,,7,2.42e-10,model-vs-model WITHIN this strategy (secondary),NONE in the frozen inferential package
+goemotions,zero-shot-cot,acc_eff,RQ1-primary-goemotions,60,10,9,9,7,6.00e-03,model-vs-model WITHIN this strategy,NONE in the frozen inferential package
+goemotions,zero-shot-cot,macro_f1,RQ1-primary-goemotions,60,10,0,0,0,1.00e+00,model-vs-model WITHIN this strategy,NONE in the frozen inferential package
+goemotions,zero-shot-cot,majority_vote_correctness (McNemar),RQ1-mcnemar-goemotions,30,10,9,,7,1.31e-11,model-vs-model WITHIN this strategy (secondary),NONE in the frozen inferential package
+goemotions,one-shot-cot,acc_eff,RQ1-primary-goemotions,60,10,9,9,7,6.00e-03,model-vs-model WITHIN this strategy,NONE in the frozen inferential package
+goemotions,one-shot-cot,macro_f1,RQ1-primary-goemotions,60,10,1,1,0,1.00e+00,model-vs-model WITHIN this strategy,NONE in the frozen inferential package
+goemotions,one-shot-cot,majority_vote_correctness (McNemar),RQ1-mcnemar-goemotions,30,10,5,,4,1.16e-05,model-vs-model WITHIN this strategy (secondary),NONE in the frozen inferential package

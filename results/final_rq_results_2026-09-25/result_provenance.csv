@@ -1,0 +1,397 @@
+reported_result,dataset,model,strategy,metric,value,source_file,source_field_or_location
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Gemma 4 31B,zero-shot,acc_eff_mean,0.6933,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|zero-shot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Gemma 4 31B,zero-shot,acc_cond_mean,0.6933,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|zero-shot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Gemma 4 31B,zero-shot,macro_f1_mean,0.6748,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|zero-shot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Gemma 4 31B,zero-shot,evaluability_mean,1.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|zero-shot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Gemma 4 31B,zero-shot,invalid_rate_mean,0.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|zero-shot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Gemma 4 31B,zero-shot,acc_eff_ci,"[0.6592, 0.7270]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Gemma 4 31B,zero-shot,macro_f1_ci,"[0.6399, 0.7089]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Gemma 4 31B,zero-shot,model_invalid_records_5runs,0,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|zero-shot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Gemma 4 31B,zero-shot,client_latency_mean_s,15.07 ± 2.73,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Gemma 4 31B,zero-shot-cot,acc_eff_mean,0.6747,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|zero-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Gemma 4 31B,zero-shot-cot,acc_cond_mean,0.6747,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|zero-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Gemma 4 31B,zero-shot-cot,macro_f1_mean,0.6503,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|zero-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Gemma 4 31B,zero-shot-cot,evaluability_mean,1.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|zero-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Gemma 4 31B,zero-shot-cot,invalid_rate_mean,0.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|zero-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Gemma 4 31B,zero-shot-cot,acc_eff_ci,"[0.6406, 0.7087]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Gemma 4 31B,zero-shot-cot,macro_f1_ci,"[0.6156, 0.6854]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Gemma 4 31B,zero-shot-cot,model_invalid_records_5runs,0,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|zero-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Gemma 4 31B,zero-shot-cot,client_latency_mean_s,13.10 ± 1.97,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Gemma 4 31B,one-shot-cot,acc_eff_mean,0.6755,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|one-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Gemma 4 31B,one-shot-cot,acc_cond_mean,0.6755,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|one-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Gemma 4 31B,one-shot-cot,macro_f1_mean,0.6510,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|one-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Gemma 4 31B,one-shot-cot,evaluability_mean,1.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|one-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Gemma 4 31B,one-shot-cot,invalid_rate_mean,0.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|one-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Gemma 4 31B,one-shot-cot,acc_eff_ci,"[0.6418, 0.7093]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Gemma 4 31B,one-shot-cot,macro_f1_ci,"[0.6165, 0.6859]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Gemma 4 31B,one-shot-cot,model_invalid_records_5runs,0,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|google/gemma-4-31b-it|one-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Gemma 4 31B,one-shot-cot,client_latency_mean_s,15.14 ± 3.77,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Llama 4 Scout,zero-shot,acc_eff_mean,0.7296,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|zero-shot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Llama 4 Scout,zero-shot,acc_cond_mean,0.7525,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|zero-shot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Llama 4 Scout,zero-shot,macro_f1_mean,0.7519,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|zero-shot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Llama 4 Scout,zero-shot,evaluability_mean,0.9697,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|zero-shot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Llama 4 Scout,zero-shot,invalid_rate_mean,0.0303,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|zero-shot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Llama 4 Scout,zero-shot,acc_eff_ci,"[0.7004, 0.7594]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Llama 4 Scout,zero-shot,macro_f1_ci,"[0.7214, 0.7818]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Llama 4 Scout,zero-shot,model_invalid_records_5runs,106,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|zero-shot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Llama 4 Scout,zero-shot,client_latency_mean_s,12.46 ± 0.88,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Llama 4 Scout,zero-shot-cot,acc_eff_mean,0.7330,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|zero-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Llama 4 Scout,zero-shot-cot,acc_cond_mean,0.7441,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|zero-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Llama 4 Scout,zero-shot-cot,macro_f1_mean,0.7424,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|zero-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Llama 4 Scout,zero-shot-cot,evaluability_mean,0.9851,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|zero-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Llama 4 Scout,zero-shot-cot,invalid_rate_mean,0.0149,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|zero-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Llama 4 Scout,zero-shot-cot,acc_eff_ci,"[0.7030, 0.7631]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Llama 4 Scout,zero-shot-cot,macro_f1_ci,"[0.7116, 0.7728]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Llama 4 Scout,zero-shot-cot,model_invalid_records_5runs,52,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|zero-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Llama 4 Scout,zero-shot-cot,client_latency_mean_s,14.08 ± 2.11,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Llama 4 Scout,one-shot-cot,acc_eff_mean,0.7502,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|one-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Llama 4 Scout,one-shot-cot,acc_cond_mean,0.7519,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|one-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Llama 4 Scout,one-shot-cot,macro_f1_mean,0.7510,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|one-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Llama 4 Scout,one-shot-cot,evaluability_mean,0.9977,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|one-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Llama 4 Scout,one-shot-cot,invalid_rate_mean,0.0023,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|one-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Llama 4 Scout,one-shot-cot,acc_eff_ci,"[0.7202, 0.7803]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Llama 4 Scout,one-shot-cot,macro_f1_ci,"[0.7207, 0.7809]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Llama 4 Scout,one-shot-cot,model_invalid_records_5runs,8,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|meta-llama/llama-4-scout|one-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Llama 4 Scout,one-shot-cot,client_latency_mean_s,10.23 ± 0.64,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Mistral Small 4,zero-shot,acc_eff_mean,0.6861,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|zero-shot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Mistral Small 4,zero-shot,acc_cond_mean,0.6863,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|zero-shot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Mistral Small 4,zero-shot,macro_f1_mean,0.6657,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|zero-shot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Mistral Small 4,zero-shot,evaluability_mean,0.9997,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|zero-shot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Mistral Small 4,zero-shot,invalid_rate_mean,0.0003,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|zero-shot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Mistral Small 4,zero-shot,acc_eff_ci,"[0.6524, 0.7193]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Mistral Small 4,zero-shot,macro_f1_ci,"[0.6306, 0.7000]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Mistral Small 4,zero-shot,model_invalid_records_5runs,1,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|zero-shot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Mistral Small 4,zero-shot,client_latency_mean_s,5.36 ± 0.03,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Mistral Small 4,zero-shot-cot,acc_eff_mean,0.6609,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|zero-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Mistral Small 4,zero-shot-cot,acc_cond_mean,0.6611,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|zero-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Mistral Small 4,zero-shot-cot,macro_f1_mean,0.6312,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|zero-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Mistral Small 4,zero-shot-cot,evaluability_mean,0.9997,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|zero-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Mistral Small 4,zero-shot-cot,invalid_rate_mean,0.0003,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|zero-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Mistral Small 4,zero-shot-cot,acc_eff_ci,"[0.6266, 0.6950]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Mistral Small 4,zero-shot-cot,macro_f1_ci,"[0.5948, 0.6662]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Mistral Small 4,zero-shot-cot,model_invalid_records_5runs,1,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|zero-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Mistral Small 4,zero-shot-cot,client_latency_mean_s,5.25 ± 0.11,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Mistral Small 4,one-shot-cot,acc_eff_mean,0.6735,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|one-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Mistral Small 4,one-shot-cot,acc_cond_mean,0.6735,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|one-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Mistral Small 4,one-shot-cot,macro_f1_mean,0.6481,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|one-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Mistral Small 4,one-shot-cot,evaluability_mean,1.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|one-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Mistral Small 4,one-shot-cot,invalid_rate_mean,0.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|one-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Mistral Small 4,one-shot-cot,acc_eff_ci,"[0.6395, 0.7064]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Mistral Small 4,one-shot-cot,macro_f1_ci,"[0.6126, 0.6824]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Mistral Small 4,one-shot-cot,model_invalid_records_5runs,0,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|mistralai/mistral-small-2603|one-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Mistral Small 4,one-shot-cot,client_latency_mean_s,4.89 ± 0.12,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Phi-4,zero-shot,acc_eff_mean,0.7222,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|zero-shot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Phi-4,zero-shot,acc_cond_mean,0.7447,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|zero-shot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Phi-4,zero-shot,macro_f1_mean,0.7439,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|zero-shot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Phi-4,zero-shot,evaluability_mean,0.9697,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|zero-shot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Phi-4,zero-shot,invalid_rate_mean,0.0303,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|zero-shot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Phi-4,zero-shot,acc_eff_ci,"[0.6953, 0.7496]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Phi-4,zero-shot,macro_f1_ci,"[0.7156, 0.7709]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Phi-4,zero-shot,model_invalid_records_5runs,106,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|zero-shot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Phi-4,zero-shot,client_latency_mean_s,12.91 ± 1.36,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Phi-4,zero-shot-cot,acc_eff_mean,0.7001,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|zero-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Phi-4,zero-shot-cot,acc_cond_mean,0.7060,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|zero-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Phi-4,zero-shot-cot,macro_f1_mean,0.6964,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|zero-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Phi-4,zero-shot-cot,evaluability_mean,0.9917,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|zero-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Phi-4,zero-shot-cot,invalid_rate_mean,0.0083,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|zero-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Phi-4,zero-shot-cot,acc_eff_ci,"[0.6710, 0.7296]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Phi-4,zero-shot-cot,macro_f1_ci,"[0.6668, 0.7260]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Phi-4,zero-shot-cot,model_invalid_records_5runs,29,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|zero-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Phi-4,zero-shot-cot,client_latency_mean_s,12.86 ± 1.19,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Phi-4,one-shot-cot,acc_eff_mean,0.7299,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|one-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Phi-4,one-shot-cot,acc_cond_mean,0.7333,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|one-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Phi-4,one-shot-cot,macro_f1_mean,0.7302,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|one-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Phi-4,one-shot-cot,evaluability_mean,0.9954,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|one-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Phi-4,one-shot-cot,invalid_rate_mean,0.0046,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|one-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Phi-4,one-shot-cot,acc_eff_ci,"[0.7021, 0.7577]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Phi-4,one-shot-cot,macro_f1_ci,"[0.7023, 0.7580]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Phi-4,one-shot-cot,model_invalid_records_5runs,16,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|microsoft/phi-4|one-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Phi-4,one-shot-cot,client_latency_mean_s,10.13 ± 1.84,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Qwen3.5 27B,zero-shot,acc_eff_mean,0.6910,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|zero-shot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Qwen3.5 27B,zero-shot,acc_cond_mean,0.6924,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|zero-shot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Qwen3.5 27B,zero-shot,macro_f1_mean,0.6742,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|zero-shot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Qwen3.5 27B,zero-shot,evaluability_mean,0.9980,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|zero-shot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Qwen3.5 27B,zero-shot,invalid_rate_mean,0.0020,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|zero-shot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Qwen3.5 27B,zero-shot,acc_eff_ci,"[0.6569, 0.7236]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Qwen3.5 27B,zero-shot,macro_f1_ci,"[0.6384, 0.7081]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Qwen3.5 27B,zero-shot,model_invalid_records_5runs,7,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|zero-shot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Qwen3.5 27B,zero-shot,client_latency_mean_s,9.05 ± 0.27,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Qwen3.5 27B,zero-shot-cot,acc_eff_mean,0.6023,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|zero-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Qwen3.5 27B,zero-shot-cot,acc_cond_mean,0.6525,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|zero-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Qwen3.5 27B,zero-shot-cot,macro_f1_mean,0.5983,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|zero-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Qwen3.5 27B,zero-shot-cot,evaluability_mean,0.9230,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|zero-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Qwen3.5 27B,zero-shot-cot,invalid_rate_mean,0.0770,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|zero-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Qwen3.5 27B,zero-shot-cot,acc_eff_ci,"[0.5660, 0.6383]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Qwen3.5 27B,zero-shot-cot,macro_f1_ci,"[0.5586, 0.6360]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Qwen3.5 27B,zero-shot-cot,model_invalid_records_5runs,269,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|zero-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Qwen3.5 27B,zero-shot-cot,client_latency_mean_s,8.67 ± 0.24,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,dreaddit,Qwen3.5 27B,one-shot-cot,acc_eff_mean,0.6475,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|one-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,dreaddit,Qwen3.5 27B,one-shot-cot,acc_cond_mean,0.6482,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|one-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,dreaddit,Qwen3.5 27B,one-shot-cot,macro_f1_mean,0.6105,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|one-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,dreaddit,Qwen3.5 27B,one-shot-cot,evaluability_mean,0.9989,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|one-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,dreaddit,Qwen3.5 27B,one-shot-cot,invalid_rate_mean,0.0011,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|one-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,dreaddit,Qwen3.5 27B,one-shot-cot,acc_eff_ci,"[0.6129, 0.6813]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,dreaddit,Qwen3.5 27B,one-shot-cot,macro_f1_ci,"[0.5730, 0.6465]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),dreaddit,Qwen3.5 27B,one-shot-cot,model_invalid_records_5runs,4,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['dreaddit|qwen/qwen3.5-27b|one-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),dreaddit,Qwen3.5 27B,one-shot-cot,client_latency_mean_s,8.40 ± 0.45,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Gemma 4 31B,zero-shot,acc_eff_mean,0.8196,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|zero-shot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Gemma 4 31B,zero-shot,acc_cond_mean,0.8196,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|zero-shot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Gemma 4 31B,zero-shot,macro_f1_mean,0.5932,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|zero-shot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Gemma 4 31B,zero-shot,evaluability_mean,1.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|zero-shot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Gemma 4 31B,zero-shot,invalid_rate_mean,0.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|zero-shot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Gemma 4 31B,zero-shot,acc_eff_ci,"[0.7907, 0.8489]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Gemma 4 31B,zero-shot,macro_f1_ci,"[0.4818, 0.6712]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Gemma 4 31B,zero-shot,model_invalid_records_5runs,0,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|zero-shot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Gemma 4 31B,zero-shot,client_latency_mean_s,11.54 ± 1.38,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Gemma 4 31B,zero-shot-cot,acc_eff_mean,0.8174,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|zero-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Gemma 4 31B,zero-shot-cot,acc_cond_mean,0.8174,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|zero-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Gemma 4 31B,zero-shot-cot,macro_f1_mean,0.5832,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|zero-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Gemma 4 31B,zero-shot-cot,evaluability_mean,1.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|zero-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Gemma 4 31B,zero-shot-cot,invalid_rate_mean,0.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|zero-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Gemma 4 31B,zero-shot-cot,acc_eff_ci,"[0.7868, 0.8469]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Gemma 4 31B,zero-shot-cot,macro_f1_ci,"[0.4724, 0.6610]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Gemma 4 31B,zero-shot-cot,model_invalid_records_5runs,0,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|zero-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Gemma 4 31B,zero-shot-cot,client_latency_mean_s,14.17 ± 3.54,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Gemma 4 31B,one-shot-cot,acc_eff_mean,0.8132,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|one-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Gemma 4 31B,one-shot-cot,acc_cond_mean,0.8150,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|one-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Gemma 4 31B,one-shot-cot,macro_f1_mean,0.5852,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|one-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Gemma 4 31B,one-shot-cot,evaluability_mean,0.9977,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|one-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Gemma 4 31B,one-shot-cot,invalid_rate_mean,0.0023,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|one-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Gemma 4 31B,one-shot-cot,acc_eff_ci,"[0.7826, 0.8424]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Gemma 4 31B,one-shot-cot,macro_f1_ci,"[0.4783, 0.6636]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Gemma 4 31B,one-shot-cot,model_invalid_records_5runs,7,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|google/gemma-4-31b-it|one-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Gemma 4 31B,one-shot-cot,client_latency_mean_s,10.09 ± 2.75,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Llama 4 Scout,zero-shot,acc_eff_mean,0.7003,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|zero-shot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Llama 4 Scout,zero-shot,acc_cond_mean,0.7267,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|zero-shot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Llama 4 Scout,zero-shot,macro_f1_mean,0.5202,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|zero-shot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Llama 4 Scout,zero-shot,evaluability_mean,0.9637,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|zero-shot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Llama 4 Scout,zero-shot,invalid_rate_mean,0.0363,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|zero-shot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Llama 4 Scout,zero-shot,acc_eff_ci,"[0.6669, 0.7344]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Llama 4 Scout,zero-shot,macro_f1_ci,"[0.4529, 0.5795]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Llama 4 Scout,zero-shot,model_invalid_records_5runs,113,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|zero-shot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Llama 4 Scout,zero-shot,client_latency_mean_s,10.78 ± 1.26,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Llama 4 Scout,zero-shot-cot,acc_eff_mean,0.6826,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|zero-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Llama 4 Scout,zero-shot-cot,acc_cond_mean,0.7278,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|zero-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Llama 4 Scout,zero-shot-cot,macro_f1_mean,0.5296,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|zero-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Llama 4 Scout,zero-shot-cot,evaluability_mean,0.9379,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|zero-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Llama 4 Scout,zero-shot-cot,invalid_rate_mean,0.0621,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|zero-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Llama 4 Scout,zero-shot-cot,acc_eff_ci,"[0.6479, 0.7161]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Llama 4 Scout,zero-shot-cot,macro_f1_ci,"[0.4587, 0.5909]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Llama 4 Scout,zero-shot-cot,model_invalid_records_5runs,193,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|zero-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Llama 4 Scout,zero-shot-cot,client_latency_mean_s,11.02 ± 2.20,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Llama 4 Scout,one-shot-cot,acc_eff_mean,0.7318,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|one-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Llama 4 Scout,one-shot-cot,acc_cond_mean,0.7671,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|one-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Llama 4 Scout,one-shot-cot,macro_f1_mean,0.5443,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|one-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Llama 4 Scout,one-shot-cot,evaluability_mean,0.9540,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|one-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Llama 4 Scout,one-shot-cot,invalid_rate_mean,0.0460,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|one-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Llama 4 Scout,one-shot-cot,acc_eff_ci,"[0.6977, 0.7659]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Llama 4 Scout,one-shot-cot,macro_f1_ci,"[0.4657, 0.6119]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Llama 4 Scout,one-shot-cot,model_invalid_records_5runs,143,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|meta-llama/llama-4-scout|one-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Llama 4 Scout,one-shot-cot,client_latency_mean_s,10.00 ± 1.34,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Mistral Small 4,zero-shot,acc_eff_mean,0.7656,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|zero-shot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Mistral Small 4,zero-shot,acc_cond_mean,0.7698,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|zero-shot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Mistral Small 4,zero-shot,macro_f1_mean,0.5615,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|zero-shot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Mistral Small 4,zero-shot,evaluability_mean,0.9945,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|zero-shot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Mistral Small 4,zero-shot,invalid_rate_mean,0.0055,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|zero-shot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Mistral Small 4,zero-shot,acc_eff_ci,"[0.7318, 0.7978]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Mistral Small 4,zero-shot,macro_f1_ci,"[0.4709, 0.6356]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Mistral Small 4,zero-shot,model_invalid_records_5runs,17,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|zero-shot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Mistral Small 4,zero-shot,client_latency_mean_s,3.98 ± 0.48,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Mistral Small 4,zero-shot-cot,acc_eff_mean,0.7412,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|zero-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Mistral Small 4,zero-shot-cot,acc_cond_mean,0.7457,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|zero-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Mistral Small 4,zero-shot-cot,macro_f1_mean,0.5357,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|zero-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Mistral Small 4,zero-shot-cot,evaluability_mean,0.9939,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|zero-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Mistral Small 4,zero-shot-cot,invalid_rate_mean,0.0061,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|zero-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Mistral Small 4,zero-shot-cot,acc_eff_ci,"[0.7064, 0.7740]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Mistral Small 4,zero-shot-cot,macro_f1_ci,"[0.4478, 0.6089]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Mistral Small 4,zero-shot-cot,model_invalid_records_5runs,19,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|zero-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Mistral Small 4,zero-shot-cot,client_latency_mean_s,3.43 ± 0.11,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Mistral Small 4,one-shot-cot,acc_eff_mean,0.7830,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|one-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Mistral Small 4,one-shot-cot,acc_cond_mean,0.7860,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|one-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Mistral Small 4,one-shot-cot,macro_f1_mean,0.5940,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|one-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Mistral Small 4,one-shot-cot,evaluability_mean,0.9961,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|one-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Mistral Small 4,one-shot-cot,invalid_rate_mean,0.0039,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|one-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Mistral Small 4,one-shot-cot,acc_eff_ci,"[0.7518, 0.8129]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Mistral Small 4,one-shot-cot,macro_f1_ci,"[0.4865, 0.6681]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Mistral Small 4,one-shot-cot,model_invalid_records_5runs,12,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|mistralai/mistral-small-2603|one-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Mistral Small 4,one-shot-cot,client_latency_mean_s,3.32 ± 0.16,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Phi-4,zero-shot,acc_eff_mean,0.7363,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|zero-shot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Phi-4,zero-shot,acc_cond_mean,0.7845,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|zero-shot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Phi-4,zero-shot,macro_f1_mean,0.5342,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|zero-shot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Phi-4,zero-shot,evaluability_mean,0.9386,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|zero-shot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Phi-4,zero-shot,invalid_rate_mean,0.0614,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|zero-shot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Phi-4,zero-shot,acc_eff_ci,"[0.7064, 0.7659]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Phi-4,zero-shot,macro_f1_ci,"[0.4465, 0.6023]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Phi-4,zero-shot,model_invalid_records_5runs,191,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|zero-shot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Phi-4,zero-shot,client_latency_mean_s,13.07 ± 0.35,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Phi-4,zero-shot-cot,acc_eff_mean,0.7617,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|zero-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Phi-4,zero-shot-cot,acc_cond_mean,0.8094,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|zero-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Phi-4,zero-shot-cot,macro_f1_mean,0.5634,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|zero-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Phi-4,zero-shot-cot,evaluability_mean,0.9412,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|zero-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Phi-4,zero-shot-cot,invalid_rate_mean,0.0588,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|zero-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Phi-4,zero-shot-cot,acc_eff_ci,"[0.7309, 0.7923]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Phi-4,zero-shot-cot,macro_f1_ci,"[0.4674, 0.6328]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Phi-4,zero-shot-cot,model_invalid_records_5runs,183,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|zero-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Phi-4,zero-shot-cot,client_latency_mean_s,13.09 ± 1.89,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Phi-4,one-shot-cot,acc_eff_mean,0.6730,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|one-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Phi-4,one-shot-cot,acc_cond_mean,0.8011,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|one-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Phi-4,one-shot-cot,macro_f1_mean,0.5406,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|one-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Phi-4,one-shot-cot,evaluability_mean,0.8395,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|one-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Phi-4,one-shot-cot,invalid_rate_mean,0.1605,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|one-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Phi-4,one-shot-cot,acc_eff_ci,"[0.6463, 0.7000]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Phi-4,one-shot-cot,macro_f1_ci,"[0.4420, 0.6105]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Phi-4,one-shot-cot,model_invalid_records_5runs,499,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|microsoft/phi-4|one-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Phi-4,one-shot-cot,client_latency_mean_s,10.63 ± 2.23,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Qwen3.5 27B,zero-shot,acc_eff_mean,0.7862,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|zero-shot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Qwen3.5 27B,zero-shot,acc_cond_mean,0.7862,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|zero-shot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Qwen3.5 27B,zero-shot,macro_f1_mean,0.5723,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|zero-shot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Qwen3.5 27B,zero-shot,evaluability_mean,1.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|zero-shot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Qwen3.5 27B,zero-shot,invalid_rate_mean,0.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|zero-shot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Qwen3.5 27B,zero-shot,acc_eff_ci,"[0.7534, 0.8177]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Qwen3.5 27B,zero-shot,macro_f1_ci,"[0.4621, 0.6485]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Qwen3.5 27B,zero-shot,model_invalid_records_5runs,0,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|zero-shot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Qwen3.5 27B,zero-shot,client_latency_mean_s,7.27 ± 0.56,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Qwen3.5 27B,zero-shot-cot,acc_eff_mean,0.7897,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|zero-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Qwen3.5 27B,zero-shot-cot,acc_cond_mean,0.7897,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|zero-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Qwen3.5 27B,zero-shot-cot,macro_f1_mean,0.5793,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|zero-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Qwen3.5 27B,zero-shot-cot,evaluability_mean,1.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|zero-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Qwen3.5 27B,zero-shot-cot,invalid_rate_mean,0.0000,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|zero-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Qwen3.5 27B,zero-shot-cot,acc_eff_ci,"[0.7576, 0.8212]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Qwen3.5 27B,zero-shot-cot,macro_f1_ci,"[0.4677, 0.6566]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Qwen3.5 27B,zero-shot-cot,model_invalid_records_5runs,0,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|zero-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Qwen3.5 27B,zero-shot-cot,client_latency_mean_s,7.32 ± 0.37,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ1/RQ2/RQ3 acc_eff_mean,goemotions,Qwen3.5 27B,one-shot-cot,acc_eff_mean,0.7701,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|one-shot-cot']['acc_eff']['mean']['float']
+RQ1/RQ2/RQ3 acc_cond_mean,goemotions,Qwen3.5 27B,one-shot-cot,acc_cond_mean,0.7726,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|one-shot-cot']['acc_cond']['mean']['float']
+RQ1/RQ2/RQ3 macro_f1_mean,goemotions,Qwen3.5 27B,one-shot-cot,macro_f1_mean,0.5673,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|one-shot-cot']['macro_f1']['mean']['float']
+RQ1/RQ2/RQ3 evaluability_mean,goemotions,Qwen3.5 27B,one-shot-cot,evaluability_mean,0.9968,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|one-shot-cot']['evaluability']['mean']['float']
+RQ1/RQ2/RQ3 invalid_rate_mean,goemotions,Qwen3.5 27B,one-shot-cot,invalid_rate_mean,0.0032,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|one-shot-cot']['invalid_rate']['mean']['float']
+RQ1 acc_eff 95% CI,goemotions,Qwen3.5 27B,one-shot-cot,acc_eff_ci,"[0.7379, 0.8039]",inferential_2026-09-21/tables/configuration_level_ci.csv,acc_eff_ci_low / acc_eff_ci_high
+RQ1 macro_f1 95% CI,goemotions,Qwen3.5 27B,one-shot-cot,macro_f1_ci,"[0.4600, 0.6437]",inferential_2026-09-21/tables/configuration_level_ci.csv,macro_f1_ci_low / macro_f1_ci_high
+Invalid records (5 runs),goemotions,Qwen3.5 27B,one-shot-cot,model_invalid_records_5runs,10,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,aggregates['goemotions|qwen/qwen3.5-27b|one-shot-cot']['sum_N_model_invalid']
+Latency client mean (s),goemotions,Qwen3.5 27B,one-shot-cot,client_latency_mean_s,7.32 ± 0.33,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_mean_s
+RQ2 vs baseline (Holm),dreaddit,Gemma 4 31B,zero-shot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Gemma 4 31B,zero-shot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Gemma 4 31B,zero-shot-cot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Gemma 4 31B,zero-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Gemma 4 31B,one-shot-cot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Gemma 4 31B,one-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Llama 4 Scout,zero-shot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Llama 4 Scout,zero-shot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Llama 4 Scout,zero-shot-cot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Llama 4 Scout,zero-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Llama 4 Scout,one-shot-cot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Llama 4 Scout,one-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Mistral Small 4,zero-shot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Mistral Small 4,zero-shot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Mistral Small 4,zero-shot-cot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Mistral Small 4,zero-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Mistral Small 4,one-shot-cot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Mistral Small 4,one-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Phi-4,zero-shot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Phi-4,zero-shot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Phi-4,zero-shot-cot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Phi-4,zero-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Phi-4,one-shot-cot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Phi-4,one-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Qwen3.5 27B,zero-shot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Qwen3.5 27B,zero-shot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Qwen3.5 27B,zero-shot-cot,p_holm,6.70e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Qwen3.5 27B,zero-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),dreaddit,Qwen3.5 27B,one-shot-cot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,dreaddit,Qwen3.5 27B,one-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),dreaddit,(all),(all),baseline_attributable,0.507868,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Gemma 4 31B,zero-shot,p_holm,4.40e-02,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Gemma 4 31B,zero-shot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Gemma 4 31B,zero-shot-cot,p_holm,4.40e-02,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Gemma 4 31B,zero-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Gemma 4 31B,one-shot-cot,p_holm,1.65e-01,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Gemma 4 31B,one-shot-cot,holm_significant_0.05,False,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Llama 4 Scout,zero-shot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Llama 4 Scout,zero-shot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Llama 4 Scout,zero-shot-cot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Llama 4 Scout,zero-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Llama 4 Scout,one-shot-cot,p_holm,4.40e-02,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Llama 4 Scout,one-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Mistral Small 4,zero-shot,p_holm,1.00e+00,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Mistral Small 4,zero-shot,holm_significant_0.05,False,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Mistral Small 4,zero-shot-cot,p_holm,2.17e-01,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Mistral Small 4,zero-shot-cot,holm_significant_0.05,False,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Mistral Small 4,one-shot-cot,p_holm,1.00e+00,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Mistral Small 4,one-shot-cot,holm_significant_0.05,False,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Phi-4,zero-shot,p_holm,4.80e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Phi-4,zero-shot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Phi-4,zero-shot-cot,p_holm,5.62e-01,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Phi-4,zero-shot-cot,holm_significant_0.05,False,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Phi-4,one-shot-cot,p_holm,1.50e-03,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Phi-4,one-shot-cot,holm_significant_0.05,True,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Qwen3.5 27B,zero-shot,p_holm,1.00e+00,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Qwen3.5 27B,zero-shot,holm_significant_0.05,False,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Qwen3.5 27B,zero-shot-cot,p_holm,1.00e+00,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Qwen3.5 27B,zero-shot-cot,holm_significant_0.05,False,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+RQ2 vs baseline (Holm),goemotions,Qwen3.5 27B,one-shot-cot,p_holm,1.00e+00,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,p_holm
+RQ2 vs baseline decision,goemotions,Qwen3.5 27B,one-shot-cot,holm_significant_0.05,False,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,holm_significant_0.05 / direction
+RQ2 majority baseline (attributable items),goemotions,(all),(all),baseline_attributable,0.782958,inferential_2026-09-21/tables/rq2_configuration_vs_baseline.csv,baseline_attributable
+Latency client median (s),dreaddit,Gemma 4 31B,zero-shot,client_latency_median_s,12.06 ± 2.13,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Gemma 4 31B,zero-shot-cot,client_latency_median_s,10.26 ± 1.65,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Gemma 4 31B,one-shot-cot,client_latency_median_s,12.68 ± 3.91,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Llama 4 Scout,zero-shot,client_latency_median_s,12.07 ± 0.01,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Llama 4 Scout,zero-shot-cot,client_latency_median_s,12.70 ± 1.38,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Llama 4 Scout,one-shot-cot,client_latency_median_s,9.67 ± 1.34,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Mistral Small 4,zero-shot,client_latency_median_s,6.06 ± 0.00,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Mistral Small 4,zero-shot-cot,client_latency_median_s,6.06 ± 0.01,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Mistral Small 4,one-shot-cot,client_latency_median_s,6.04 ± 0.00,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Phi-4,zero-shot,client_latency_median_s,10.88 ± 1.64,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Phi-4,zero-shot-cot,client_latency_median_s,12.08 ± 0.01,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Phi-4,one-shot-cot,client_latency_median_s,9.65 ± 1.35,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Qwen3.5 27B,zero-shot,client_latency_median_s,9.08 ± 0.00,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Qwen3.5 27B,zero-shot-cot,client_latency_median_s,9.08 ± 0.00,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),dreaddit,Qwen3.5 27B,one-shot-cot,client_latency_median_s,9.07 ± 0.01,rq1_rq3_reporting_2026-09-21/tables/rq3_dreaddit_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Gemma 4 31B,zero-shot,client_latency_median_s,7.88 ± 1.65,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Gemma 4 31B,zero-shot-cot,client_latency_median_s,11.48 ± 3.30,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Gemma 4 31B,one-shot-cot,client_latency_median_s,7.86 ± 2.69,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Llama 4 Scout,zero-shot,client_latency_median_s,9.07 ± 2.13,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Llama 4 Scout,zero-shot-cot,client_latency_median_s,9.07 ± 3.01,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Llama 4 Scout,one-shot-cot,client_latency_median_s,8.46 ± 1.34,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Mistral Small 4,zero-shot,client_latency_median_s,3.05 ± 0.01,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Mistral Small 4,zero-shot-cot,client_latency_median_s,3.04 ± 0.00,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Mistral Small 4,one-shot-cot,client_latency_median_s,3.04 ± 0.00,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Phi-4,zero-shot,client_latency_median_s,11.47 ± 1.30,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Phi-4,zero-shot-cot,client_latency_median_s,9.65 ± 1.35,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Phi-4,one-shot-cot,client_latency_median_s,9.65 ± 1.35,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Qwen3.5 27B,zero-shot,client_latency_median_s,6.04 ± 0.00,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Qwen3.5 27B,zero-shot-cot,client_latency_median_s,6.04 ± 0.00,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Latency client median (s),goemotions,Qwen3.5 27B,one-shot-cot,client_latency_median_s,6.04 ± 0.00,rq1_rq3_reporting_2026-09-21/tables/rq3_goemotions_latency.csv,client_latency_median_s
+Majority baseline (frozen scalar),dreaddit,(all),(all),majority_baseline_frozen,0.516084,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,baselines['dreaddit']['frozen']
+Majority baseline (frozen scalar),goemotions,(all),(all),majority_baseline_frozen,0.781701,rq1_rq3_reporting_2026-09-21/rq12_full_precision.json,baselines['goemotions']['frozen']
+RQ1 Holm-significant model pairs,dreaddit,(all),(all),n_holm_sig_acc_eff,13,inferential_2026-09-21/tables/rq1_model_pairs_primary.csv,"rows with dataset=dreaddit, metric=acc_eff, holm_significant_0.05=True (of 30)"
+RQ1 Holm-significant model pairs,dreaddit,(all),(all),n_holm_sig_macro_f1,20,inferential_2026-09-21/tables/rq1_model_pairs_primary.csv,"rows with dataset=dreaddit, metric=macro_f1, holm_significant_0.05=True (of 30)"
+RQ1 Holm-significant model pairs,goemotions,(all),(all),n_holm_sig_acc_eff,21,inferential_2026-09-21/tables/rq1_model_pairs_primary.csv,"rows with dataset=goemotions, metric=acc_eff, holm_significant_0.05=True (of 30)"
+RQ1 Holm-significant model pairs,goemotions,(all),(all),n_holm_sig_macro_f1,0,inferential_2026-09-21/tables/rq1_model_pairs_primary.csv,"rows with dataset=goemotions, metric=macro_f1, holm_significant_0.05=True (of 30)"

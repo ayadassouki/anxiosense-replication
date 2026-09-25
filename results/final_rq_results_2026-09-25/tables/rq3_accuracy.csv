@@ -1,0 +1,31 @@
+dataset,model,strategy,acc_eff_mean,acc_eff_5run_sd,acc_eff_ci_low,acc_eff_ci_high,delta_vs_zero_shot_acc_eff,rank_within_model,ci_overlaps_zero_shot_ci_within_model,strategy_difference_statistically_tested
+dreaddit,Gemma 4 31B,zero-shot,0.6933,0.0040,0.6592,0.7270,0.0000,1,n/a (reference),NO
+dreaddit,Gemma 4 31B,zero-shot-cot,0.6747,0.0008,0.6406,0.7087,-0.0186,3,true,NO
+dreaddit,Gemma 4 31B,one-shot-cot,0.6755,0.0064,0.6418,0.7093,-0.0177,2,true,NO
+dreaddit,Llama 4 Scout,zero-shot,0.7296,0.0027,0.7004,0.7594,0.0000,3,n/a (reference),NO
+dreaddit,Llama 4 Scout,zero-shot-cot,0.7330,0.0049,0.7030,0.7631,0.0034,2,true,NO
+dreaddit,Llama 4 Scout,one-shot-cot,0.7502,0.0049,0.7202,0.7803,0.0206,1,true,NO
+dreaddit,Mistral Small 4,zero-shot,0.6861,0.0036,0.6524,0.7193,0.0000,1,n/a (reference),NO
+dreaddit,Mistral Small 4,zero-shot-cot,0.6609,0.0042,0.6266,0.6950,-0.0252,3,true,NO
+dreaddit,Mistral Small 4,one-shot-cot,0.6735,0.0053,0.6395,0.7064,-0.0126,2,true,NO
+dreaddit,Phi-4,zero-shot,0.7222,0.0164,0.6953,0.7496,0.0000,2,n/a (reference),NO
+dreaddit,Phi-4,zero-shot-cot,0.7001,0.0022,0.6710,0.7296,-0.0220,3,true,NO
+dreaddit,Phi-4,one-shot-cot,0.7299,0.0101,0.7021,0.7577,0.0077,1,true,NO
+dreaddit,Qwen3.5 27B,zero-shot,0.6910,0.0014,0.6569,0.7236,0.0000,1,n/a (reference),NO
+dreaddit,Qwen3.5 27B,zero-shot-cot,0.6023,0.0049,0.5660,0.6383,-0.0887,3,false,NO
+dreaddit,Qwen3.5 27B,one-shot-cot,0.6475,0.0016,0.6129,0.6813,-0.0435,2,true,NO
+goemotions,Gemma 4 31B,zero-shot,0.8196,0.0038,0.7907,0.8489,0.0000,1,n/a (reference),NO
+goemotions,Gemma 4 31B,zero-shot-cot,0.8174,0.0037,0.7868,0.8469,-0.0023,2,true,NO
+goemotions,Gemma 4 31B,one-shot-cot,0.8132,0.0029,0.7826,0.8424,-0.0064,3,true,NO
+goemotions,Llama 4 Scout,zero-shot,0.7003,0.0084,0.6669,0.7344,0.0000,2,n/a (reference),NO
+goemotions,Llama 4 Scout,zero-shot-cot,0.6826,0.0092,0.6479,0.7161,-0.0177,3,true,NO
+goemotions,Llama 4 Scout,one-shot-cot,0.7318,0.0092,0.6977,0.7659,0.0315,1,true,NO
+goemotions,Mistral Small 4,zero-shot,0.7656,0.0053,0.7318,0.7978,0.0000,2,n/a (reference),NO
+goemotions,Mistral Small 4,zero-shot-cot,0.7412,0.0078,0.7064,0.7740,-0.0244,3,true,NO
+goemotions,Mistral Small 4,one-shot-cot,0.7830,0.0047,0.7518,0.8129,0.0174,1,true,NO
+goemotions,Phi-4,zero-shot,0.7363,0.0164,0.7064,0.7659,0.0000,2,n/a (reference),NO
+goemotions,Phi-4,zero-shot-cot,0.7617,0.0090,0.7309,0.7923,0.0254,1,true,NO
+goemotions,Phi-4,one-shot-cot,0.6730,0.1258,0.6463,0.7000,-0.0633,3,false,NO
+goemotions,Qwen3.5 27B,zero-shot,0.7862,0.0011,0.7534,0.8177,0.0000,2,n/a (reference),NO
+goemotions,Qwen3.5 27B,zero-shot-cot,0.7897,0.0021,0.7576,0.8212,0.0035,1,true,NO
+goemotions,Qwen3.5 27B,one-shot-cot,0.7701,0.0000,0.7379,0.8039,-0.0161,3,true,NO
