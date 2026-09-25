@@ -183,65 +183,97 @@ anxiosense-replication/
         └── code/
 ```
 
-Metric Interpretation
-Effective Accuracy
-Effective accuracy treats model-attributable invalid outputs as incorrect rather than silently removing them from the denominator.
-This makes failures to produce evaluable output part of the measured system performance.
-Conditional Accuracy
-Conditional accuracy measures accuracy only among outputs that could be evaluated.
-Because excluding invalid outputs can introduce selection effects, conditional accuracy is reported descriptively and is not used as the primary ranking metric.
-Macro-F1
-Macro-F1 is the unweighted mean of the per-class F1 scores over the fixed class set.
-It is reported alongside accuracy because overall accuracy can obscure differences in performance across classes, particularly when class frequencies are imbalanced.
-Precision and Recall
-Configuration-level precision and recall are reported as macro-averaged precision and macro-averaged recall.
-Per-class precision, recall, and F1 are provided separately in the supplementary table.
-Total System Response Time
-Total system response time represents client-side end-to-end wall-clock time around the AnxioSense evaluation request.
-Latency values are summarized across the five experimental runs.
+## Metric Interpretation
+
+### Effective Accuracy
+
+Effective accuracy treats model-attributable invalid outputs as incorrect rather than silently removing them from the denominator. This makes failures to produce evaluable output part of the measured system performance.
+
+### Conditional Accuracy
+
+Conditional accuracy measures accuracy only among outputs that could be evaluated. Because excluding invalid outputs can introduce selection effects, conditional accuracy is reported descriptively and is not used as the primary ranking metric.
+
+### Macro-F1
+
+Macro-F1 is the unweighted mean of the per-class F1 scores over the fixed class set. It is reported alongside accuracy because overall accuracy can obscure differences in performance across classes, particularly when class frequencies are imbalanced.
+
+### Precision and Recall
+
+Configuration-level precision and recall are reported as macro-averaged precision and macro-averaged recall. Per-class precision, recall, and F1 are provided separately in the supplementary table.
+
+### Total System Response Time
+
+Total system response time represents client-side end-to-end wall-clock time around the AnxioSense evaluation request. Latency values are summarized across the five experimental runs.
+
 Latency comparisons are descriptive because the experiments were not designed as controlled latency benchmarks. Provider load, execution timing, machine differences, polling behavior, and other infrastructure factors may influence the recorded response times.
-Statistical Analysis
-The statistical analyses were designed around the paired structure of the experimental data.
-Depending on the research question, the analysis includes:
+
+---
+
+## Statistical Analysis
+
+The statistical analyses were designed around the paired structure of the experimental data. Depending on the research question, the analysis includes:
+
 - paired item-level permutation tests
 - item-cluster bootstrap confidence intervals
 - exact McNemar tests
 - Holm correction for multiple comparisons
+
 The statistical unit for paired analyses is the dataset item while retaining its repeated experimental runs, rather than treating every repeated execution as an independent observation.
+
 Detailed statistical procedures, assumptions, comparison families, and validation checks are documented within the corresponding result packages.
-Multiple-Comparison Correction
-Multiple statistical comparisons increase the probability of obtaining a small p-value by chance.
-Holm correction is therefore used within predefined comparison families to control the family-wise error rate while avoiding the unnecessary conservatism of applying one correction across unrelated research questions.
+
+### Multiple-Comparison Correction
+
+Multiple statistical comparisons increase the probability of obtaining a small p-value by chance. Holm correction is therefore used within predefined comparison families to control the family-wise error rate while avoiding the unnecessary conservatism of applying one correction across unrelated research questions.
+
 Both raw and Holm-adjusted statistical results are preserved in the corresponding analysis artifacts.
-RQ3 Analysis Status
-The prompting-strategy inferential analysis was conducted after the original RQ1/RQ2 inferential analysis plan.
-It is therefore reported as post-hoc/exploratory rather than preregistered confirmatory analysis.
-Before the RQ3 inferential tests were executed, the analysis procedure, comparison families, input hashes, and analysis code were frozen and recorded.
-This provides an auditable record of the analysis decisions while preserving the appropriate post-hoc interpretation.
-Reproducibility and Validation
+
+### RQ3 Analysis Status
+
+The prompting-strategy inferential analysis was conducted after the original RQ1/RQ2 inferential analysis plan. It is therefore reported as **post-hoc/exploratory** rather than preregistered confirmatory analysis.
+
+Before the RQ3 inferential tests were executed, the analysis procedure, comparison families, input hashes, and analysis code were frozen and recorded. This provides an auditable record of the analysis decisions while preserving the appropriate post-hoc interpretation.
+
+---
+
+## Reproducibility and Validation
+
 The result packages contain supporting reproducibility materials including:
+
 - analysis scripts
 - source/provenance records
 - validation reports
 - SHA-256 checksum manifests
 - statistical output tables
 - saved statistical replicates where applicable
-The analyses were designed as read-only reporting and audit layers over the frozen experimental artifacts.
-The original experimental outputs were not repaired or modified to improve reported performance.
-Package-specific validation information is available in each package's VALIDATION.md and CHECKSUMS.sha256 files.
-Important Interpretation Notes
+
+The analyses were designed as read-only reporting and audit layers over the frozen experimental artifacts. The original experimental outputs were not repaired or modified to improve reported performance.
+
+Package-specific validation information is available in each package's `VALIDATION.md` and `CHECKSUMS.sha256` files.
+
+---
+
+## Important Interpretation Notes
+
 1. Results are reported separately for Dreaddit and GoEmotions. Performance on one dataset should not be assumed to generalize directly to the other.
 2. Model performance depends on both the model and prompting strategy. A single universal model ranking is therefore not assumed.
 3. Effective accuracy incorporates invalid model outputs into system-level performance.
 4. Macro-F1 is reported alongside accuracy to provide information about performance across classes.
 5. GoEmotions contains substantial class imbalance, including very small minority-class support, which limits the precision of some macro-F1 comparisons.
 6. Latency results are descriptive and should not be interpreted as controlled causal comparisons between models or prompting strategies.
-7. The RQ3 prompting-strategy inferential analysis is post-hoc/exploratory.
+7. The RQ3 prompting-strategy inferential analysis is **post-hoc/exploratory**.
 8. Invalid-output behavior is analyzed explicitly rather than silently removing invalid predictions from the evaluation.
-AI-Assistance Disclosure
+
+---
+
+## AI-Assistance Disclosure
+
 Generative AI tools were used to assist with portions of code development, validation workflows, organization and classification of analysis artifacts, and drafting and editing documentation.
-All quantitative findings reported in the replication package were derived from the experimental artifacts and analysis procedures documented in the repository.
-AI-generated suggestions were not treated as experimental evidence.
-Purpose of This Repository
-This repository serves as the replication and audit package for the AnxioSense experimental evaluation.
-Its purpose is to provide the supporting result tables, statistical outputs, analysis code, provenance records, and validation artifacts required to trace and reproduce the reported experimental findings.
+
+All quantitative findings reported in the replication package were derived from the experimental artifacts and analysis procedures documented in the repository. AI-generated suggestions were not treated as experimental evidence.
+
+---
+
+## Purpose of This Repository
+
+This repository serves as the replication and audit package for the AnxioSense experimental evaluation. Its purpose is to provide the supporting result tables, statistical outputs, analysis code, provenance records, and validation artifacts required to trace and reproduce the reported experimental findings.
