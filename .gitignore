@@ -1,37 +1,65 @@
-.DS_Store
+# Dependencies and generated build output
+node_modules
+dist
+.mastra
+coverage/
+*.tsbuildinfo
+.cache/
+*.log
+output.txt
+
+# Local environment files
 .env
 .env.*
 !.env.example
 
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.mypy_cache/
-
-venv/
-.venv/
-node_modules/
-
 *.db
 *.db-*
+
 *.duckdb
 *.duckdb.*
-*.sqlite
-*.sqlite3
+*.wal
+.netlify
+.vercel
+.DS_Store
+.hf_cache/
 
-*.zip
-*.tar
-*.tar.gz
+# Mastra auto-generated public evaluation run outputs.
+# These are served as static files by the Hono server when present here —
+# move completed research runs to evaluation/prompt-experiments/runs/ instead.
+src/mastra/public/evaluation/
 
-runs/
-raw/
-parsed/
+# Backup and scratch files — should never be committed
+*.backup.ts
+*.bak
+AGENTS.md
 
-*.log
+# Gated evaluation data
+evaluation/datasets/aimh_swmh/
 
-# Private provenance artifact — contains historical local machine paths
-experiment/results/descriptive_2026-09-21/frozen_grid_manifest.json
+# Internal implementation audit
+IMPLEMENTATION_AUDIT_REPORT.md
 
-# Dreaddit text data is not redistributed in the public replication package
-datasets/dreaddit_source/dreaddit_test.csv
-datasets/official_test_2026-09-04/dreaddit_test_official.csv
+# Python-generated files
+__pycache__/
+*.pyc
+
+# Evaluation outputs
+evaluation/llm-experiments/outputs/
+evaluation/llm-experiments/logs/
+# Dataset files (raw downloads)
+evaluation/data/
+# Environment
+.env
+*.env
+
+# Publication experiment raw outputs.
+# Preserved on disk and archived alongside the paper; too large and too numerous
+# for version control. The runner's provenance (experiment.json) is reproducible
+# from the committed config + manifests + code, so nothing is lost by ignoring these.
+evaluation/publication_experiments/runs/
+
+# Machine-local pre-run snapshot used by verify_bench_003.py check 10. Its
+# listing hashes incorporate file mtimes, so a committed copy would produce a
+# false failure on any other machine or fresh clone. Regenerate locally.
+evaluation/datasets/official_test_2026-09-04/_historical_baseline.json
