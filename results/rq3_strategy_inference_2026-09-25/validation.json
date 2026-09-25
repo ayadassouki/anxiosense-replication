@@ -1,0 +1,199 @@
+{
+ "n_checks": 32,
+ "n_pass": 32,
+ "all_passed": true,
+ "checks": [
+  {
+   "n": 1,
+   "check": "Pre-check ran and every pre-condition check passed",
+   "pass": true,
+   "detail": "38/38"
+  },
+  {
+   "n": 2,
+   "check": "Strategy arms use identical attributable item sets in every model x run group",
+   "pass": true,
+   "detail": "dreaddit 0/25 and goemotions 0/25 groups differ; n = 699 / 622"
+  },
+  {
+   "n": 3,
+   "check": "Every comparison uses n = items, not item-run records and not runs",
+   "pass": true,
+   "detail": "n = 699 (not 3,495; not 5) / n = 622 (not 3,110; not 5)"
+  },
+  {
+   "n": 4,
+   "check": "Every file named in PREREGISTRATION_FREEZE.json still matches its frozen SHA-256",
+   "pass": true,
+   "detail": "5 files; frozen 2026-09-25T22:04:33Z"
+  },
+  {
+   "n": 5,
+   "check": "The analysis code that ran is the code that was frozen",
+   "pass": true,
+   "detail": "6bce537485fbcfa2..."
+  },
+  {
+   "n": 6,
+   "check": "Freeze timestamp precedes the analysis timestamp",
+   "pass": true,
+   "detail": "2026-09-25T22:04:33Z <= 2026-09-25T22:04:45Z"
+  },
+  {
+   "n": 7,
+   "check": "All four frozen input artifacts still match their recorded SHA-256",
+   "pass": true,
+   "detail": "4 inputs"
+  },
+  {
+   "n": 8,
+   "check": "Inputs are byte-identical to those used by the frozen 2026-09-21 inferential analysis",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "n": 9,
+   "check": "All 150 per-run and 30 five-run frozen metric values reproduced from the raw grid",
+   "pass": true,
+   "detail": "max |observed - frozen| = 2.220e-16"
+  },
+  {
+   "n": 10,
+   "check": "Bootstrap and permutation draws are bit-identical to the frozen 2026-09-21 draws",
+   "pass": true,
+   "detail": "same seed strings, same digests"
+  },
+  {
+   "n": 11,
+   "check": "Configuration-level bootstrap CIs are string-identical to inferential_2026-09-21/configuration_level_ci.csv",
+   "pass": true,
+   "detail": "30 configurations x 10 fields, 0 mismatches"
+  },
+  {
+   "n": 12,
+   "check": "Row counts: 60 primary, 30 McNemar, 30 conditional-accuracy CI, 30 configuration CI",
+   "pass": true,
+   "detail": "60/30/30/30"
+  },
+  {
+   "n": 13,
+   "check": "Holm families are exactly as declared (30 / 30 primary, 15 / 15 McNemar)",
+   "pass": true,
+   "detail": "{\"RQ3-primary-dreaddit\": 30, \"RQ3-mcnemar-dreaddit\": 15, \"RQ3-primary-goemotions\": 30, \"RQ3-mcnemar-goemotions\": 15}"
+  },
+  {
+   "n": 14,
+   "check": "All 5 models x 3 declared contrasts x 2 metrics x 2 datasets are present and reported",
+   "pass": true,
+   "detail": "60 distinct"
+  },
+  {
+   "n": 15,
+   "check": "Holm-adjusted p-values and significance flags recomputed independently from the raw p-values",
+   "pass": true,
+   "detail": "0 disagreements over 90 rows"
+  },
+  {
+   "n": 16,
+   "check": "Holm-adjusted p is never below the unadjusted p",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "n": 17,
+   "check": "Every permutation p-value is of the form (1 + k) / (1 + P) with P = 10,000",
+   "pass": true,
+   "detail": "minimum attainable p = 0.000100"
+  },
+  {
+   "n": 18,
+   "check": "All 60 permutation p-values re-derived from the saved permutation statistics",
+   "pass": true,
+   "detail": "60 re-derived, 0 disagreements"
+  },
+  {
+   "n": 19,
+   "check": "All 60 bootstrap 95% CIs re-derived from the saved bootstrap replicates",
+   "pass": true,
+   "detail": "60 re-derived, 0 disagreements"
+  },
+  {
+   "n": 20,
+   "check": "The three contrasts are internally consistent: d(ZS,1S-CoT) = d(ZS,ZS-CoT) + d(ZS-CoT,1S-CoT)",
+   "pass": true,
+   "detail": "20 model x metric x dataset cells, 0 violations"
+  },
+  {
+   "n": 21,
+   "check": "Invalid-output counts on every row match the frozen per-run sums",
+   "pass": true,
+   "detail": "0 mismatches over 120 values"
+  },
+  {
+   "n": 22,
+   "check": "Evaluability = 1 - invalid rate on the attributable denominator for every arm (no conditioning on validity)",
+   "pass": true,
+   "detail": "0 mismatches over 120 values"
+  },
+  {
+   "n": 23,
+   "check": "Conditional accuracy is reported with CIs only and carries no p-value or Holm decision",
+   "pass": true,
+   "detail": "30 rows, fields: dataset, model, strategy_A, strategy_B, A_acc_cond, A_sd..."
+  },
+  {
+   "n": 24,
+   "check": "No pooled strategy main effect and no family spanning both datasets",
+   "pass": true,
+   "detail": "every row is one model x one dataset; families are per dataset"
+  },
+  {
+   "n": 25,
+   "check": "Bootstrap replicates containing no GoEmotions 'anxiety' item are recorded",
+   "pass": true,
+   "detail": "14 of 4000"
+  },
+  {
+   "n": 26,
+   "check": "Every output file matches the SHA-256 recorded in analysis_manifest.json",
+   "pass": true,
+   "detail": "12 files, 0 mismatches"
+  },
+  {
+   "n": 27,
+   "check": "descriptive_2026-09-21: all 32 files still byte-identical to the 2026-09-21 freeze inventory",
+   "pass": true,
+   "detail": "32 files, 0 changed"
+  },
+  {
+   "n": 28,
+   "check": "inferential_2026-09-21: present and untouched by this analysis (no manifest of its own to verify)",
+   "pass": true,
+   "detail": "read-only access only"
+  },
+  {
+   "n": 29,
+   "check": "final_rq_results_2026-09-25: verifies against its own CHECKSUMS.sha256",
+   "pass": true,
+   "detail": "0 mismatches"
+  },
+  {
+   "n": 30,
+   "check": "unified_results_tables_2026-09-25: verifies against its own CHECKSUMS.sha256",
+   "pass": true,
+   "detail": "0 mismatches"
+  },
+  {
+   "n": 31,
+   "check": "rq3_inference_design_2026-09-25: present and untouched by this analysis (no manifest of its own to verify)",
+   "pass": true,
+   "detail": "read-only access only"
+  },
+  {
+   "n": 32,
+   "check": "invalid_output_audit_2026-09-25: pre-existing manifest advisory unchanged by this analysis",
+   "pass": true,
+   "detail": "2 files still failing that package's own manifest (pre-existing, not caused here): cell_level_invalid_vs_quality.csv, invalid_output_audit_report.md"
+  }
+ ]
+}

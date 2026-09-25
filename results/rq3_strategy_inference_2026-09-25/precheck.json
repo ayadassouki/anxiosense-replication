@@ -1,0 +1,269 @@
+{
+ "created_utc": "2026-09-25T22:01:18Z",
+ "python": "3.10.12",
+ "numpy": "2.2.6",
+ "purpose": "pre-analysis verification; contains no strategy comparison and no p-value",
+ "input_sha256": {
+  "descriptive_2026-09-21/authoritative_records.jsonl": "97c8ca960e0f349dda121515fb45855e9c8787cc8a5cc35a0ce292c1d214a18a",
+  "descriptive_2026-09-21/frozen_grid_manifest.json": "fba6a4617558b64bec61cee18e2a0b63e9457a03c6a3d94cd8e1a1916527dfa8",
+  "descriptive_2026-09-21/per_run_results.csv": "6b3f374a0e76d2c8068c06cc077a2affadd1cd15ac91aab027efeb591efe86ec",
+  "descriptive_2026-09-21/aggregate_results.csv": "4242c3634c8939714eb0b7ff25b446783f1747add91c36040a95bf02f1646768",
+  "manifests/official_dreaddit_test.json": "71731b47547efbfdf3f3703643180d79307c5e73015f31c31c7bc62a2e92204c",
+  "manifests/goemotions_715_subset_2026-09-09.json": "dacab2c4db7fbbfccc26c7f969aca078c997a487fc6e679e9cc262a0ce21ed56"
+ },
+ "datasets": {
+  "dreaddit": {
+   "n_full": 715,
+   "n_safety": 16,
+   "n_attributable": 699,
+   "items_sha256": "50042e17fdb030a1444a7ae47c0259909a0191a15c6979fed50576a8a2a4f636",
+   "model_run_groups_checked": 25,
+   "model_run_groups_with_differing_arms": 0,
+   "safety_sample_ids": [
+    "dread_1166",
+    "dread_1264",
+    "dread_13106",
+    "dread_1344",
+    "dread_1375",
+    "dread_15960",
+    "dread_16792",
+    "dread_1796",
+    "dread_1976",
+    "dread_29555",
+    "dread_3879",
+    "dread_43574",
+    "dread_48013",
+    "dread_54649",
+    "dread_657",
+    "dread_888"
+   ]
+  },
+  "goemotions": {
+   "n_full": 623,
+   "n_safety": 1,
+   "n_attributable": 622,
+   "items_sha256": "0fe806ef9e4bbfebf0d6cdac5cc42b026d89aa7f493af0119f6ce6a5ae734c57",
+   "model_run_groups_checked": 25,
+   "model_run_groups_with_differing_arms": 0,
+   "safety_sample_ids": [
+    "ge_eelf9bs"
+   ]
+  }
+ },
+ "draw_sha256": {
+  "dreaddit": {
+   "bootstrap_indices_u16le": "5aad14ca8cbb2ccc8c358623ac81504778c3994187db6750346c7fc326edae9d",
+   "permutation_bits_le": "92a9304c0f72f5e114418e5146b6bccb9562afa4685405f04e065499660ddba4"
+  },
+  "goemotions": {
+   "bootstrap_indices_u16le": "14bbb591b3f0635b5994a5dd62d53e09a40e15d5e97a1836c5092048db3420c2",
+   "permutation_bits_le": "aaf61859c93f1f566c950a1053c7898414ede99f0c9cc93d653dc4fac77e1af7"
+  }
+ },
+ "declared_seed_strings": {
+  "bootstrap": {
+   "dreaddit": "20260921|dreaddit|bootstrap",
+   "goemotions": "20260921|goemotions|bootstrap"
+  },
+  "permutation": {
+   "dreaddit": "20260922|dreaddit|permutation",
+   "goemotions": "20260922|goemotions|permutation"
+  }
+ },
+ "B": 4000,
+ "P": 10000,
+ "checks": [
+  {
+   "check": "input hash authoritative_records.jsonl",
+   "pass": true,
+   "detail": "97c8ca960e0f349d..."
+  },
+  {
+   "check": "input hash frozen_grid_manifest.json",
+   "pass": true,
+   "detail": "fba6a4617558b64b..."
+  },
+  {
+   "check": "input hash per_run_results.csv",
+   "pass": true,
+   "detail": "6b3f374a0e76d2c8..."
+  },
+  {
+   "check": "input hash aggregate_results.csv",
+   "pass": true,
+   "detail": "4242c3634c893971..."
+  },
+  {
+   "check": "dataset manifest dreaddit",
+   "pass": true,
+   "detail": "71731b47547efbfd..."
+  },
+  {
+   "check": "dataset manifest goemotions",
+   "pass": true,
+   "detail": "dacab2c4db7fbbfc..."
+  },
+  {
+   "check": "grid size",
+   "pass": true,
+   "detail": "150 cells / 100350 records"
+  },
+  {
+   "check": "cell set matches frozen manifest",
+   "pass": true,
+   "detail": "150/150"
+  },
+  {
+   "check": "dreaddit manifest size",
+   "pass": true,
+   "detail": "715"
+  },
+  {
+   "check": "goemotions manifest size",
+   "pass": true,
+   "detail": "623"
+  },
+  {
+   "check": "dreaddit: one full item set across all 75 cells",
+   "pass": true,
+   "detail": "1 distinct set(s), size 715"
+  },
+  {
+   "check": "dreaddit: one safety-intercept set across all 75 cells",
+   "pass": true,
+   "detail": "1 distinct set(s), size 16"
+  },
+  {
+   "check": "dreaddit: safety count as frozen",
+   "pass": true,
+   "detail": "16 == 16"
+  },
+  {
+   "check": "dreaddit: attributable item list reproduces the frozen inferential item hash",
+   "pass": true,
+   "detail": "50042e17fdb030a1... n=699"
+  },
+  {
+   "check": "dreaddit: model x run groups where the 3 strategy arms differ in attributable items",
+   "pass": true,
+   "detail": "0 of 25 groups differ"
+  },
+  {
+   "check": "dreaddit: every arm has exactly n=699 attributable items",
+   "pass": true,
+   "detail": "25 model x run groups x 3 arms"
+  },
+  {
+   "check": "goemotions: one full item set across all 75 cells",
+   "pass": true,
+   "detail": "1 distinct set(s), size 623"
+  },
+  {
+   "check": "goemotions: one safety-intercept set across all 75 cells",
+   "pass": true,
+   "detail": "1 distinct set(s), size 1"
+  },
+  {
+   "check": "goemotions: safety count as frozen",
+   "pass": true,
+   "detail": "1 == 1"
+  },
+  {
+   "check": "goemotions: attributable item list reproduces the frozen inferential item hash",
+   "pass": true,
+   "detail": "0fe806ef9e4bbfeb... n=622"
+  },
+  {
+   "check": "goemotions: model x run groups where the 3 strategy arms differ in attributable items",
+   "pass": true,
+   "detail": "0 of 25 groups differ"
+  },
+  {
+   "check": "goemotions: every arm has exactly n=622 attributable items",
+   "pass": true,
+   "detail": "25 model x run groups x 3 arms"
+  },
+  {
+   "check": "dreaddit google/gemma-4-31b-it: five-run vector retained per item x strategy",
+   "pass": true,
+   "detail": "array shape (699, 3, 5) (item x strategy x run)"
+  },
+  {
+   "check": "dreaddit meta-llama/llama-4-scout: five-run vector retained per item x strategy",
+   "pass": true,
+   "detail": "array shape (699, 3, 5) (item x strategy x run)"
+  },
+  {
+   "check": "dreaddit mistralai/mistral-small-2603: five-run vector retained per item x strategy",
+   "pass": true,
+   "detail": "array shape (699, 3, 5) (item x strategy x run)"
+  },
+  {
+   "check": "dreaddit microsoft/phi-4: five-run vector retained per item x strategy",
+   "pass": true,
+   "detail": "array shape (699, 3, 5) (item x strategy x run)"
+  },
+  {
+   "check": "dreaddit qwen/qwen3.5-27b: five-run vector retained per item x strategy",
+   "pass": true,
+   "detail": "array shape (699, 3, 5) (item x strategy x run)"
+  },
+  {
+   "check": "dreaddit: independent units for a strategy contrast",
+   "pass": true,
+   "detail": "n = 699 items, NOT 3495 item-run records and NOT 5 runs"
+  },
+  {
+   "check": "goemotions google/gemma-4-31b-it: five-run vector retained per item x strategy",
+   "pass": true,
+   "detail": "array shape (622, 3, 5) (item x strategy x run)"
+  },
+  {
+   "check": "goemotions meta-llama/llama-4-scout: five-run vector retained per item x strategy",
+   "pass": true,
+   "detail": "array shape (622, 3, 5) (item x strategy x run)"
+  },
+  {
+   "check": "goemotions mistralai/mistral-small-2603: five-run vector retained per item x strategy",
+   "pass": true,
+   "detail": "array shape (622, 3, 5) (item x strategy x run)"
+  },
+  {
+   "check": "goemotions microsoft/phi-4: five-run vector retained per item x strategy",
+   "pass": true,
+   "detail": "array shape (622, 3, 5) (item x strategy x run)"
+  },
+  {
+   "check": "goemotions qwen/qwen3.5-27b: five-run vector retained per item x strategy",
+   "pass": true,
+   "detail": "array shape (622, 3, 5) (item x strategy x run)"
+  },
+  {
+   "check": "goemotions: independent units for a strategy contrast",
+   "pass": true,
+   "detail": "n = 622 items, NOT 3110 item-run records and NOT 5 runs"
+  },
+  {
+   "check": "dreaddit: bootstrap_indices_u16le reproduces the frozen 2026-09-21 draw",
+   "pass": true,
+   "detail": "5aad14ca8cbb2ccc..."
+  },
+  {
+   "check": "dreaddit: permutation_bits_le reproduces the frozen 2026-09-21 draw",
+   "pass": true,
+   "detail": "92a9304c0f72f5e1..."
+  },
+  {
+   "check": "goemotions: bootstrap_indices_u16le reproduces the frozen 2026-09-21 draw",
+   "pass": true,
+   "detail": "14bbb591b3f0635b..."
+  },
+  {
+   "check": "goemotions: permutation_bits_le reproduces the frozen 2026-09-21 draw",
+   "pass": true,
+   "detail": "aaf61859c93f1f56..."
+  }
+ ],
+ "all_checks_passed": true,
+ "n_checks": 38
+}

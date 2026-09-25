@@ -1,0 +1,108 @@
+{
+ "created_utc": "2026-09-25T22:04:45Z",
+ "analysis": "RQ3 prompting-strategy contrasts (post-hoc / exploratory)",
+ "plan": "RQ3_SAP_ADDENDUM.md",
+ "procedure_frozen": "2026-09-21 STATISTICAL_ANALYSIS_PLAN.md (unchanged)",
+ "python": "3.10.12",
+ "numpy": "2.2.6",
+ "B": 4000,
+ "P": 10000,
+ "alpha": 0.05,
+ "bootstrap_seed_strings": {
+  "dreaddit": "20260921|dreaddit|bootstrap",
+  "goemotions": "20260921|goemotions|bootstrap"
+ },
+ "permutation_seed_strings": {
+  "dreaddit": "20260922|dreaddit|permutation",
+  "goemotions": "20260922|goemotions|permutation"
+ },
+ "draw_sha256": {
+  "dreaddit": {
+   "bootstrap_indices_u16le": "5aad14ca8cbb2ccc8c358623ac81504778c3994187db6750346c7fc326edae9d",
+   "permutation_bits_le": "92a9304c0f72f5e114418e5146b6bccb9562afa4685405f04e065499660ddba4"
+  },
+  "goemotions": {
+   "bootstrap_indices_u16le": "14bbb591b3f0635b5994a5dd62d53e09a40e15d5e97a1836c5092048db3420c2",
+   "permutation_bits_le": "aaf61859c93f1f566c950a1053c7898414ede99f0c9cc93d653dc4fac77e1af7"
+  }
+ },
+ "input_sha256": {
+  "descriptive_2026-09-21/authoritative_records.jsonl": "97c8ca960e0f349dda121515fb45855e9c8787cc8a5cc35a0ce292c1d214a18a",
+  "descriptive_2026-09-21/frozen_grid_manifest.json": "fba6a4617558b64bec61cee18e2a0b63e9457a03c6a3d94cd8e1a1916527dfa8",
+  "descriptive_2026-09-21/per_run_results.csv": "6b3f374a0e76d2c8068c06cc077a2affadd1cd15ac91aab027efeb591efe86ec",
+  "descriptive_2026-09-21/aggregate_results.csv": "4242c3634c8939714eb0b7ff25b446783f1747add91c36040a95bf02f1646768"
+ },
+ "max_abs_diff_observed_vs_frozen": 2.220446049250313e-16,
+ "families": {
+  "RQ3-primary-dreaddit": 30,
+  "RQ3-mcnemar-dreaddit": 15,
+  "RQ3-primary-goemotions": 30,
+  "RQ3-mcnemar-goemotions": 15
+ },
+ "items": {
+  "dreaddit": {
+   "n_attributable": 699,
+   "items_sha256": "50042e17fdb030a1444a7ae47c0259909a0191a15c6979fed50576a8a2a4f636",
+   "safety_excluded": [
+    "dread_1166",
+    "dread_1264",
+    "dread_13106",
+    "dread_1344",
+    "dread_1375",
+    "dread_15960",
+    "dread_16792",
+    "dread_1796",
+    "dread_1976",
+    "dread_29555",
+    "dread_3879",
+    "dread_43574",
+    "dread_48013",
+    "dread_54649",
+    "dread_657",
+    "dread_888"
+   ],
+   "majority_class": 1
+  },
+  "goemotions": {
+   "n_attributable": 622,
+   "items_sha256": "0fe806ef9e4bbfebf0d6cdac5cc42b026d89aa7f493af0119f6ce6a5ae734c57",
+   "safety_excluded": [
+    "ge_eelf9bs"
+   ],
+   "majority_class": "non_distress"
+  }
+ },
+ "notes": [
+  "goemotions: 14 of 4000 bootstrap replicates contain no 'anxiety' item; per MetricPolicy 1.0.0 its recall/F1 = 0 in those replicates (applied verbatim)."
+ ],
+ "contrasts": [
+  "zero-shot vs zero-shot-CoT",
+  "zero-shot vs one-shot-CoT",
+  "zero-shot-CoT vs one-shot-CoT"
+ ],
+ "code_sha256": {
+  "00_precheck.py": "c67f46cf127bce5d7c84654e3a88517e71365be7bfc17662bb4722831cd1f08d",
+  "01_run_rq3_strategy_inference.py": "6bce537485fbcfa2c890cdb77237617c9c3b1ceacf7cd56deed3f8a3b3eb21fd"
+ },
+ "goemotions_bootstrap_replicates_without_anxiety_item": 14,
+ "output_sha256": {
+  "rq3_configuration_level_ci.csv": "6db90bc76ae23008e0d9a64888b6470dcdf105f562d340c46c82e37bd809b9ac",
+  "rq3_dreaddit_acc_eff.md": "f1852e39942dcca3b00e8fcc9add61b7ba98465c6fd8c4e6aaad5f62fbe210a4",
+  "rq3_dreaddit_macro_f1.md": "0984895351441e0d8bb3b1395d2d4478d30366b182161473b486245967e5c035",
+  "rq3_goemotions_acc_eff.md": "7d072144c80a41f88cef1e93ec8f67cecf86702d4515e8671978fac7b8592f0c",
+  "rq3_goemotions_macro_f1.md": "531abd39e8fdaf9becfd37b7cf6681b90c9b626e9e751b7c2193f8c63be607fb",
+  "rq3_strategy_pairs_conditional_accuracy_ci.csv": "449e025abbde9a2672ec9235a452f881e593822545a1800f53309c772973fa56",
+  "rq3_strategy_pairs_mcnemar.csv": "0beb31e79f62354c25120e8fd893a8132ccd4dd1f7177ed703ab24b38372c67b",
+  "rq3_strategy_pairs_primary.csv": "af17c1bd3a45e04dd177bd2f900f66fa00f6416d13ee0bab68cea26fef2632a2",
+  "bootstrap_dreaddit.csv.gz": "b9c98c11515dca263e783ec020ad9874d07fbed846813758716fabacf12307e4",
+  "bootstrap_goemotions.csv.gz": "29cc3fcb3d22f1b2ddb69042af15f9db7d1207021b475dbb76a3c912f67ef6a9",
+  "permutation_dreaddit.csv.gz": "cb49f25db641ac38f234bd0d40c3de925a4aa216e9174fa18a496faed3e177f1",
+  "permutation_goemotions.csv.gz": "4a3e27f576f633f0dca66bbc571e2ebe1ddbd4e99338d6f440cf2852fd3e0fc9"
+ },
+ "counts": {
+  "primary_rows": 60,
+  "mcnemar_rows": 30,
+  "conditional_rows": 30,
+  "configuration_rows": 30
+ }
+}

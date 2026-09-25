@@ -1,0 +1,100 @@
+{
+ "frozen_utc": "2026-09-25T22:04:33Z",
+ "what_this_is": "Pre-analysis freeze for the RQ3 prompting-strategy inferential analysis. Every file listed below existed with the recorded SHA-256 BEFORE code/01_run_rq3_strategy_inference.py was executed for the first time. No RQ3 strategy-comparison p-value had been computed, inspected or used at this point.",
+ "status": "POST-HOC / EXPLORATORY. Estimation procedure pre-specified and frozen 2026-09-21 for RQ1/RQ2 and applied unchanged; RQ3 contrasts declared before testing but after the descriptive results were known.",
+ "python": "3.10.12",
+ "frozen_files_sha256": {
+  "RQ3_SAP_ADDENDUM.md": "a5b5a97247538ebf1a4c89acd91998a1d91125449ad2b9c0a0ac6a86a1ac8631",
+  "precheck.json": "5003cc0e570abb94496307d52eaf097be2ff1660efdbf10a0a227a1689849fdc",
+  "INPUT_HASHES.sha256": "334250e43d0577cc6a78cd4cb17a2bc253ec4f5732ad0ab48aa8b09258985125",
+  "code/00_precheck.py": "c67f46cf127bce5d7c84654e3a88517e71365be7bfc17662bb4722831cd1f08d",
+  "code/01_run_rq3_strategy_inference.py": "6bce537485fbcfa2c890cdb77237617c9c3b1ceacf7cd56deed3f8a3b3eb21fd"
+ },
+ "input_sha256": {
+  "descriptive_2026-09-21/authoritative_records.jsonl": "97c8ca960e0f349dda121515fb45855e9c8787cc8a5cc35a0ce292c1d214a18a",
+  "descriptive_2026-09-21/frozen_grid_manifest.json": "fba6a4617558b64bec61cee18e2a0b63e9457a03c6a3d94cd8e1a1916527dfa8",
+  "descriptive_2026-09-21/per_run_results.csv": "6b3f374a0e76d2c8068c06cc077a2affadd1cd15ac91aab027efeb591efe86ec",
+  "descriptive_2026-09-21/aggregate_results.csv": "4242c3634c8939714eb0b7ff25b446783f1747add91c36040a95bf02f1646768",
+  "manifests/official_dreaddit_test.json": "71731b47547efbfdf3f3703643180d79307c5e73015f31c31c7bc62a2e92204c",
+  "manifests/goemotions_715_subset_2026-09-09.json": "dacab2c4db7fbbfccc26c7f969aca078c997a487fc6e679e9cc262a0ce21ed56"
+ },
+ "declared": {
+  "unit": "benchmark item carrying its five runs",
+  "n_items": {
+   "dreaddit": 699,
+   "goemotions": 622
+  },
+  "contrasts": [
+   "zero-shot vs zero-shot-CoT",
+   "zero-shot vs one-shot-CoT",
+   "zero-shot-CoT vs one-shot-CoT"
+  ],
+  "scope": "within model, within dataset; no pooling across models or datasets",
+  "primary_outcomes": [
+   "effective accuracy",
+   "macro_f1"
+  ],
+  "invalid_outputs": "counted as incorrect on the attributable denominator; primary analysis NOT conditioned on validity",
+  "permutation": {
+   "type": "paired item-level, whole five-run vector swapped",
+   "P": 10000,
+   "p_formula": "(1 + #{|T*| >= |T_obs|}) / (1 + P)",
+   "macro_f1": "recomputed from swapped confusion matrices, not decomposed"
+  },
+  "bootstrap": {
+   "type": "item-cluster, shared resampled index per dataset",
+   "B": 4000,
+   "ci": "95% percentile"
+  },
+  "correction": "Holm within dataset across 30 primary comparisons (5 models x 3 pairs x 2 metrics)",
+  "alpha": 0.05,
+  "families": {
+   "RQ3-primary-dreaddit": 30,
+   "RQ3-primary-goemotions": 30,
+   "RQ3-mcnemar-dreaddit": 15,
+   "RQ3-mcnemar-goemotions": 15
+  },
+  "secondary": "exact McNemar on majority-vote (>=3/5) effective correctness, own family",
+  "descriptive_only": [
+   "conditional accuracy (CIs only, no p-values)",
+   "evaluability change per contrast"
+  ],
+  "seed_strings": {
+   "bootstrap": {
+    "dreaddit": "20260921|dreaddit|bootstrap",
+    "goemotions": "20260921|goemotions|bootstrap"
+   },
+   "permutation": {
+    "dreaddit": "20260922|dreaddit|permutation",
+    "goemotions": "20260922|goemotions|permutation"
+   }
+  },
+  "draw_sha256_verified_before_freeze": {
+   "dreaddit": {
+    "bootstrap_indices_u16le": "5aad14ca8cbb2ccc8c358623ac81504778c3994187db6750346c7fc326edae9d",
+    "permutation_bits_le": "92a9304c0f72f5e114418e5146b6bccb9562afa4685405f04e065499660ddba4"
+   },
+   "goemotions": {
+    "bootstrap_indices_u16le": "14bbb591b3f0635b5994a5dd62d53e09a40e15d5e97a1836c5092048db3420c2",
+    "permutation_bits_le": "aaf61859c93f1f566c950a1053c7898414ede99f0c9cc93d653dc4fac77e1af7"
+   }
+  }
+ },
+ "preconditions_verified_before_freeze": {
+  "identical_attributable_item_sets_across_strategy_arms": {
+   "dreaddit": {
+    "model_run_groups_checked": 25,
+    "groups_with_differing_arms": 0,
+    "n_attributable": 699
+   },
+   "goemotions": {
+    "model_run_groups_checked": 25,
+    "groups_with_differing_arms": 0,
+    "n_attributable": 622
+   }
+  },
+  "five_runs_not_treated_as_independent": "per-item arrays are (item x strategy x run) = (699,3,5) / (622,3,5); the run axis is never folded into the item axis; independent units are 699 / 622 items, not 3,495 / 3,110 records and not 5 runs",
+  "precheck_checks_passed": "38/38"
+ },
+ "execution_status_at_freeze": "NOT YET EXECUTED"
+}
