@@ -181,7 +181,9 @@ anxiosense-replication/
         ├── cell_level_invalid_vs_quality.csv
         ├── unique_sample_recurrence.csv
         └── code/
-###Metric Interpretation
+```
+
+Metric Interpretation
 Effective Accuracy
 Effective accuracy treats model-attributable invalid outputs as incorrect rather than silently removing them from the denominator.
 This makes failures to produce evaluable output part of the measured system performance.
