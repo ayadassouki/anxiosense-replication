@@ -198,3 +198,72 @@ Research reports, architecture diagrams, and other project documentation are sto
 
 ```text
 docs/
+```
+Detailed experimental results and analyses are stored in:
+
+[`results/`](results/)
+
+The experimental replication instructions are available in:
+
+[`REPLICATION.md`](REPLICATION.md)
+
+This structure keeps the system implementation, research documentation, and experimental artifacts organized within the same repository.
+
+---
+
+## Scope and Limitations
+
+AnxioSense is a research prototype and should not be interpreted as a clinically validated diagnostic system.
+
+The system does not diagnose anxiety disorders and should not be used to make autonomous clinical decisions.
+
+The experimental findings are specific to the models, datasets, prompting strategies, providers, and experimental conditions evaluated in this project. The findings should not automatically be generalized to other models, datasets, or populations.
+
+---
+
+## AI-Assisted Development Disclosure
+
+Generative AI tools were used during the development of this research prototype as programming and debugging support.
+
+AI assistance was used for tasks including:
+
+- debugging code and interpreting error messages
+- suggesting code implementations and refactoring approaches
+- assisting with test and validation scripts
+- explaining programming and statistical concepts
+- reviewing documentation for clarity and organization
+
+AI-generated suggestions were not treated as automatically correct. Code, experimental procedures, outputs, and analyses were reviewed, tested, and validated before being incorporated into the project.
+
+The research design, experimental decisions, interpretation of results, and final responsibility for the work remain with the author.
+
+---
+
+## Responsible Use
+
+Because AnxioSense processes mental-health-related information, its outputs should be treated as screening-support information only.
+
+AnxioSense is **not**:
+
+- a medical diagnosis system
+- a replacement for a physician or mental-health professional
+- a crisis service
+- a system for making autonomous treatment decisions
+
+---
+
+## Author
+
+**Aya El-Dassouki**  
+BSc Computer Science  
+York University
+
+Developed as part of the EECS 4080 undergraduate research project.
+
+---
+
+## Citation
+
+If referencing this project:
+
+> Dassouki, A. (2026). *AnxioSense: A Multi-Agent Retrieval-Augmented Framework for Anxiety Screening Support*. EECS 4080 Undergraduate Research Project, York University.
