@@ -197,6 +197,7 @@ AnxioSense was developed using:
 Research reports, architecture diagrams, and other project documentation are stored in:
 
 [`docs/`](docs/)
+
 Detailed experimental results and analyses are stored in:
 
 [`results/`](results/)
