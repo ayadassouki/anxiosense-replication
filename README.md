@@ -150,10 +150,51 @@ anxiosense-replication/
 
 ## Experimental Results
 
+The `results/` directory contains the main research outputs, including:
+
+- descriptive results
+- research-question analyses
+- statistical comparisons
+- confidence intervals
+- invalid-output analysis
+- validation artifacts
+- reproducibility checks
+
+For a detailed overview of the experimental evaluation and results, see:
+
+**[Experimental Results README](results/README.md)**
+
+---
+
 ## Reproducing the Evaluation
+
+Instructions for reproducing the experimental evaluation are provided in:
+
+**[REPLICATION.md](REPLICATION.md)**
+
+The repository includes experiment configurations, analysis scripts, dataset manifests, provenance information, checksums, and validation artifacts used to document the experimental process.
+
+---
+
+## Technology
+
+AnxioSense was developed using:
+
+- TypeScript
+- Node.js
+- React
+- Express
+- Mastra
+- Large Language Model APIs
+- Retrieval-Augmented Generation (RAG)
+- Vector-based information retrieval
+- Python for experimental analysis
+
+---
 
 ## Research Documentation
 
-## Scope and Limitations
+Research reports, architecture diagrams, and other project documentation are stored in:
 
-## Citation
+```text
+docs/
