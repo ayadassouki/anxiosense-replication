@@ -1,0 +1,17 @@
+{
+ "numbers_checked": 109,
+ "unmatched": [],
+ "exempt": {
+  "0.05": "alpha",
+  "2.2e-16": "",
+  "0.06": "approx CI half-width, Dreaddit paired RQ2",
+  "0.03": "approx CI half-width, sensitivity",
+  "0.09": "rounded range end (0.094)",
+  "0.24": "rounded range end (0.242)",
+  "4.4e-16": "verification max float diff",
+  "1.1e-16": "verification max CI diff",
+  "0.02249999999999986": "stored value quoted verbatim",
+  "0.022": "displayed value",
+  "0.023": "alternative display"
+ }
+}

@@ -1,0 +1,14 @@
+# freeze check 2026-09-21T15:27:06Z
+## descriptive_2026-09-21 vs verification_2026-09-21/freeze_hashes_before.txt
+IDENTICAL (32 files; combined 5567988b1fd708fa4a81808c36b728f8a5fa471ffa2822a79d3830d41927ece5)
+## verification_2026-09-21 file sha256 + mtime (unchanged by this step: newest mtime shown)
+027c64ed316daff2eb98e057c6d3f5367bdf601d42cb96bc8faccc13325ce376  2026-09-21 15:10:16  VERIFICATION_METHOD.md
+5567988b1fd708fa4a81808c36b728f8a5fa471ffa2822a79d3830d41927ece5  2026-09-21 15:09:18  freeze_hashes_after.txt
+5567988b1fd708fa4a81808c36b728f8a5fa471ffa2822a79d3830d41927ece5  2026-09-21 15:06:50  freeze_hashes_before.txt
+c520ef30b7da390623047b2ac372aae7ca14bc2df73582abf83f52fafef957a1  2026-09-21 15:08:22  independent_per_run.csv
+723a4a809127f649830bcaa10246ffb800fb6eac4ba761536d264f72f76e1b9b  2026-09-21 15:07:41  linkage_result.json
+adb00d4aa6ac2193ff74f8b972d445e808ef43092cc30d7ab8ca961e00c1b9c3  2026-09-21 15:08:22  metrics_verification_result.json
+d5208efd8d555e49f5028bb7e796b2922db22c932509b067c876b27d927b5e39  2026-09-21 15:07:39  verify_linkage.py
+a6726438f27e494fd3126635edb8ba5730f21140bd07a3fd97e3b108ed56e527  2026-09-21 15:08:21  verify_metrics.py
+## raw source files: sha256 re-verified against frozen_grid_manifest by code/rq3_latency_extract.py
+True 11 runs

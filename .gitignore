@@ -63,3 +63,11 @@ evaluation/publication_experiments/runs/
 # listing hashes incorporate file mtimes, so a committed copy would produce a
 # false failure on any other machine or fresh clone. Regenerate locally.
 evaluation/datasets/official_test_2026-09-04/_historical_baseline.json
+
+# Private frozen grid manifest. Records absolute filesystem paths from the machines
+# the experiments ran on, so it is retained locally but never published. The tracked
+# public derivative frozen_grid_manifest_public.json is what the analysis scripts read;
+# the two differ in 11 run_dir values and nothing else (see PROVENANCE.md). Path is
+# root-anchored so it cannot match the _public file.
+results/descriptive_2026-09-21/frozen_grid_manifest.json
+evaluation/publication_experiments/results/descriptive_2026-09-21/frozen_grid_manifest.json

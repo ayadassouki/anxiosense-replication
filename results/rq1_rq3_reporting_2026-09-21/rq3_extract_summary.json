@@ -1,0 +1,511 @@
+{
+ "hash_checks": {
+  "pub_001_dreaddit_qwen": {
+   "attempts_sha256_ok": true,
+   "index_sha256_ok": true,
+   "run_dir": "external_run_evidence/pub_001_dreaddit_qwen"
+  },
+  "pub_002_dreaddit_mistral": {
+   "attempts_sha256_ok": true,
+   "index_sha256_ok": true,
+   "run_dir": "external_run_evidence/pub_002_dreaddit_mistral"
+  },
+  "pub_003_dreaddit_llama": {
+   "attempts_sha256_ok": true,
+   "index_sha256_ok": true,
+   "run_dir": "external_run_evidence/pub_003_dreaddit_llama"
+  },
+  "pub_005_dreaddit_phi": {
+   "attempts_sha256_ok": true,
+   "index_sha256_ok": true,
+   "run_dir": "external_run_evidence/pub_005_dreaddit_phi"
+  },
+  "pub_006_goemotions715_mistral": {
+   "attempts_sha256_ok": true,
+   "index_sha256_ok": true,
+   "run_dir": "external_run_evidence/pub_006_goemotions715_mistral"
+  },
+  "pub_007_goemotions715_qwen": {
+   "attempts_sha256_ok": true,
+   "index_sha256_ok": true,
+   "run_dir": "external_run_evidence/pub_007_goemotions715_qwen"
+  },
+  "pub_008_goemotions715_phi": {
+   "attempts_sha256_ok": true,
+   "index_sha256_ok": true,
+   "run_dir": "external_run_evidence/pub_008_goemotions715_phi"
+  },
+  "pub_009_goemotions715_llama": {
+   "attempts_sha256_ok": true,
+   "index_sha256_ok": true,
+   "run_dir": "external_run_evidence/pub_009_goemotions715_llama"
+  },
+  "pub_011_dreaddit_gemma_coreweave": {
+   "attempts_sha256_ok": true,
+   "index_sha256_ok": true,
+   "run_dir": "external_run_evidence/pub_011_dreaddit_gemma_coreweave"
+  },
+  "pub_012_goemotions715_gemma_coreweave": {
+   "attempts_sha256_ok": true,
+   "index_sha256_ok": true,
+   "run_dir": "external_run_evidence/pub_012_goemotions715_gemma_coreweave"
+  },
+  "pub_013_dreaddit_gemma_coreweave_osc_run5": {
+   "attempts_sha256_ok": true,
+   "index_sha256_ok": true,
+   "run_dir": "external_run_evidence/pub_013_dreaddit_gemma_coreweave_osc_run5"
+  }
+ },
+ "abort": null,
+ "per_run": {
+  "pub_001_dreaddit_qwen": {
+   "attempt_lines": 10726,
+   "terminal_attempts": 10725,
+   "terminal_attempts_missing_in_raw": 0,
+   "assessments_with_index_attempt_list": 10725
+  },
+  "pub_002_dreaddit_mistral": {
+   "attempt_lines": 10728,
+   "terminal_attempts": 10725,
+   "terminal_attempts_missing_in_raw": 0,
+   "assessments_with_index_attempt_list": 10725
+  },
+  "pub_003_dreaddit_llama": {
+   "attempt_lines": 10875,
+   "terminal_attempts": 10725,
+   "terminal_attempts_missing_in_raw": 0,
+   "assessments_with_index_attempt_list": 10725
+  },
+  "pub_005_dreaddit_phi": {
+   "attempt_lines": 10743,
+   "terminal_attempts": 10725,
+   "terminal_attempts_missing_in_raw": 0,
+   "assessments_with_index_attempt_list": 10725
+  },
+  "pub_006_goemotions715_mistral": {
+   "attempt_lines": 9349,
+   "terminal_attempts": 9345,
+   "terminal_attempts_missing_in_raw": 0,
+   "assessments_with_index_attempt_list": 9345
+  },
+  "pub_007_goemotions715_qwen": {
+   "attempt_lines": 9417,
+   "terminal_attempts": 9345,
+   "terminal_attempts_missing_in_raw": 0,
+   "assessments_with_index_attempt_list": 9345
+  },
+  "pub_008_goemotions715_phi": {
+   "attempt_lines": 9412,
+   "terminal_attempts": 9345,
+   "terminal_attempts_missing_in_raw": 0,
+   "assessments_with_index_attempt_list": 9345
+  },
+  "pub_009_goemotions715_llama": {
+   "attempt_lines": 9853,
+   "terminal_attempts": 9345,
+   "terminal_attempts_missing_in_raw": 0,
+   "assessments_with_index_attempt_list": 9345
+  },
+  "pub_011_dreaddit_gemma_coreweave": {
+   "attempt_lines": 10847,
+   "terminal_attempts": 10010,
+   "terminal_attempts_missing_in_raw": 0,
+   "assessments_with_index_attempt_list": 10010
+  },
+  "pub_012_goemotions715_gemma_coreweave": {
+   "attempt_lines": 9468,
+   "terminal_attempts": 9345,
+   "terminal_attempts_missing_in_raw": 0,
+   "assessments_with_index_attempt_list": 9345
+  },
+  "pub_013_dreaddit_gemma_coreweave_osc_run5": {
+   "attempt_lines": 719,
+   "terminal_attempts": 715,
+   "terminal_attempts_missing_in_raw": 0,
+   "assessments_with_index_attempt_list": 715
+  }
+ },
+ "rows_written": 100350,
+ "timing_key_inventory": {
+  "attempt:latency_ms": 102137,
+  "attempt:mastra_poll_interval_ms": 102137,
+  "attempt:server_latency_ms": 102137,
+  "attempt:timestamp_utc": 102137,
+  "response_body.metadata:latency_ms": 101066
+ },
+ "overlap_check": {
+  "pub_001_dreaddit_qwen": {
+   "location_inferred_from_storage": "aya_repo",
+   "terminal_attempts": 10725,
+   "terminal_attempts_during_other_run_activity": 0,
+   "by_other_run": {},
+   "cells_affected": {}
+  },
+  "pub_002_dreaddit_mistral": {
+   "location_inferred_from_storage": "aya_repo",
+   "terminal_attempts": 10725,
+   "terminal_attempts_during_other_run_activity": 0,
+   "by_other_run": {},
+   "cells_affected": {}
+  },
+  "pub_003_dreaddit_llama": {
+   "location_inferred_from_storage": "heba_usb",
+   "terminal_attempts": 10725,
+   "terminal_attempts_during_other_run_activity": 10072,
+   "by_other_run": {
+    "pub_004_dreaddit_gemma": 10072
+   },
+   "cells_affected": {
+    "dreaddit|meta-llama/llama-4-scout|one-shot-cot|run1": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|one-shot-cot|run2": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|one-shot-cot|run3": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|one-shot-cot|run4": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|one-shot-cot|run5": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|zero-shot-cot|run1": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|zero-shot-cot|run2": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|zero-shot-cot|run3": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|zero-shot-cot|run4": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|zero-shot-cot|run5": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|zero-shot|run1": [
+     62,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|zero-shot|run2": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|zero-shot|run3": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|zero-shot|run4": [
+     715,
+     715
+    ],
+    "dreaddit|meta-llama/llama-4-scout|zero-shot|run5": [
+     715,
+     715
+    ]
+   }
+  },
+  "pub_005_dreaddit_phi": {
+   "location_inferred_from_storage": "aya_repo",
+   "terminal_attempts": 10725,
+   "terminal_attempts_during_other_run_activity": 0,
+   "by_other_run": {},
+   "cells_affected": {}
+  },
+  "pub_006_goemotions715_mistral": {
+   "location_inferred_from_storage": "aya_repo",
+   "terminal_attempts": 9345,
+   "terminal_attempts_during_other_run_activity": 0,
+   "by_other_run": {},
+   "cells_affected": {}
+  },
+  "pub_007_goemotions715_qwen": {
+   "location_inferred_from_storage": "heba_usb",
+   "terminal_attempts": 9345,
+   "terminal_attempts_during_other_run_activity": 0,
+   "by_other_run": {},
+   "cells_affected": {}
+  },
+  "pub_008_goemotions715_phi": {
+   "location_inferred_from_storage": "heba_usb",
+   "terminal_attempts": 9345,
+   "terminal_attempts_during_other_run_activity": 0,
+   "by_other_run": {},
+   "cells_affected": {}
+  },
+  "pub_009_goemotions715_llama": {
+   "location_inferred_from_storage": "aya_repo",
+   "terminal_attempts": 9345,
+   "terminal_attempts_during_other_run_activity": 0,
+   "by_other_run": {},
+   "cells_affected": {}
+  },
+  "pub_011_dreaddit_gemma_coreweave": {
+   "location_inferred_from_storage": "heba_usb",
+   "terminal_attempts": 10010,
+   "terminal_attempts_during_other_run_activity": 0,
+   "by_other_run": {},
+   "cells_affected": {}
+  },
+  "pub_012_goemotions715_gemma_coreweave": {
+   "location_inferred_from_storage": "aya_repo",
+   "terminal_attempts": 9345,
+   "terminal_attempts_during_other_run_activity": 0,
+   "by_other_run": {},
+   "cells_affected": {}
+  },
+  "pub_013_dreaddit_gemma_coreweave_osc_run5": {
+   "location_inferred_from_storage": "aya_repo",
+   "terminal_attempts": 715,
+   "terminal_attempts_during_other_run_activity": 0,
+   "by_other_run": {},
+   "cells_affected": {}
+  }
+ },
+ "activity_windows": {
+  "bench_002_qwen_qwen3.5-27b": {
+   "location": "aya_repo",
+   "n_attempts": 24,
+   "n_intervals": 1,
+   "first_utc": "2026-09-04T00:26:35.698255",
+   "last_utc": "2026-09-04T00:29:49.378956"
+  },
+  "bench_003_official_dreaddit_qwen": {
+   "location": "aya_repo",
+   "n_attempts": 12,
+   "n_intervals": 1,
+   "first_utc": "2026-09-04T03:02:40.934389",
+   "last_utc": "2026-09-04T03:04:17.689181"
+  },
+  "bench_004_official_dreaddit_qwen": {
+   "location": "aya_repo",
+   "n_attempts": 12,
+   "n_intervals": 1,
+   "first_utc": "2026-09-04T03:48:51.889019",
+   "last_utc": "2026-09-04T03:50:55.364840"
+  },
+  "bench_005_poll250_dreaddit_qwen": {
+   "location": "aya_repo",
+   "n_attempts": 13,
+   "n_intervals": 1,
+   "first_utc": "2026-09-04T04:16:52.062080",
+   "last_utc": "2026-09-04T04:18:37.039666"
+  },
+  "bench_006_goemotions_scale_qwen": {
+   "location": "aya_repo",
+   "n_attempts": 4652,
+   "n_intervals": 1,
+   "first_utc": "2026-09-04T16:57:59.214417",
+   "last_utc": "2026-09-05T02:28:16.711385"
+  },
+  "bench_009_phi_smoke": {
+   "location": "aya_repo",
+   "n_attempts": 12,
+   "n_intervals": 1,
+   "first_utc": "2026-09-07T14:33:08.187258",
+   "last_utc": "2026-09-07T14:35:26.526153"
+  },
+  "bench_009_phi_smoke_aborted_mistral": {
+   "location": "aya_repo",
+   "n_attempts": 1,
+   "n_intervals": 1,
+   "first_utc": "2026-09-07T14:26:11.954342",
+   "last_utc": "2026-09-07T14:26:11.954342"
+  },
+  "bench_010_goemotions715_mistral_smoke": {
+   "location": "aya_repo",
+   "n_attempts": 12,
+   "n_intervals": 1,
+   "first_utc": "2026-09-09T17:47:30.255814",
+   "last_utc": "2026-09-09T17:48:18.638586"
+  },
+  "bench_012_goemotions715_llama_smoke": {
+   "location": "aya_repo",
+   "n_attempts": 12,
+   "n_intervals": 1,
+   "first_utc": "2026-09-11T17:28:23.834285",
+   "last_utc": "2026-09-11T17:30:03.495844"
+  },
+  "bench_015_gemma_fp4_aya_recheck": {
+   "location": "aya_repo",
+   "n_attempts": 60,
+   "n_intervals": 1,
+   "first_utc": "2026-09-14T15:12:46.661642",
+   "last_utc": "2026-09-14T15:27:52.481927"
+  },
+  "pub_001_dreaddit_qwen": {
+   "location": "aya_repo",
+   "n_attempts": 10726,
+   "n_intervals": 1,
+   "first_utc": "2026-09-05T03:25:35.510338",
+   "last_utc": "2026-09-06T06:18:21.188922"
+  },
+  "pub_002_dreaddit_mistral": {
+   "location": "aya_repo",
+   "n_attempts": 10728,
+   "n_intervals": 1,
+   "first_utc": "2026-09-06T13:13:23.874121",
+   "last_utc": "2026-09-07T05:48:29.829489"
+  },
+  "pub_005_dreaddit_phi": {
+   "location": "aya_repo",
+   "n_attempts": 10743,
+   "n_intervals": 3,
+   "first_utc": "2026-09-07T14:40:40.128762",
+   "last_utc": "2026-09-13T16:53:23.604173"
+  },
+  "pub_006_goemotions715_mistral": {
+   "location": "aya_repo",
+   "n_attempts": 9349,
+   "n_intervals": 2,
+   "first_utc": "2026-09-09T18:02:28.982384",
+   "last_utc": "2026-09-11T17:13:49.525017"
+  },
+  "pub_009_goemotions715_llama": {
+   "location": "aya_repo",
+   "n_attempts": 9853,
+   "n_intervals": 2,
+   "first_utc": "2026-09-11T17:39:09.697873",
+   "last_utc": "2026-09-13T16:18:54.065989"
+  },
+  "pub_010_goemotions715_gemma": {
+   "location": "aya_repo",
+   "n_attempts": 1622,
+   "n_intervals": 1,
+   "first_utc": "2026-09-14T15:45:53.326580",
+   "last_utc": "2026-09-15T03:21:13.558908"
+  },
+  "pub_012_goemotions715_gemma_coreweave": {
+   "location": "aya_repo",
+   "n_attempts": 9468,
+   "n_intervals": 2,
+   "first_utc": "2026-09-15T16:16:55.664946",
+   "last_utc": "2026-09-17T04:15:33.738827"
+  },
+  "pub_013_dreaddit_gemma_coreweave_osc_run5": {
+   "location": "aya_repo",
+   "n_attempts": 719,
+   "n_intervals": 1,
+   "first_utc": "2026-09-19T23:49:57.973821",
+   "last_utc": "2026-09-20T02:48:18.415288"
+  },
+  "smoke_001": {
+   "location": "aya_repo",
+   "n_attempts": 10,
+   "n_intervals": 1,
+   "first_utc": "2026-09-03T23:34:10.556131",
+   "last_utc": "2026-09-03T23:35:33.966424"
+  },
+  "bench_002_google_gemma-4-31b-it": {
+   "location": "heba_usb",
+   "n_attempts": 232,
+   "n_intervals": 1,
+   "first_utc": "2026-09-09T16:58:21.250349",
+   "last_utc": "2026-09-09T17:06:43.498450"
+  },
+  "bench_007_llama_smoke_heba": {
+   "location": "heba_usb",
+   "n_attempts": 12,
+   "n_intervals": 1,
+   "first_utc": "2026-09-06T14:57:11.378823",
+   "last_utc": "2026-09-06T15:01:54.688191"
+  },
+  "bench_010_gemma_heba_smoke": {
+   "location": "heba_usb",
+   "n_attempts": 113,
+   "n_intervals": 1,
+   "first_utc": "2026-09-09T17:39:00.916875",
+   "last_utc": "2026-09-09T18:48:34.012544"
+  },
+  "bench_011_goemotions715_qwen_smoke": {
+   "location": "heba_usb",
+   "n_attempts": 12,
+   "n_intervals": 1,
+   "first_utc": "2026-09-09T19:21:49.872614",
+   "last_utc": "2026-09-09T19:23:14.080738"
+  },
+  "bench_012_goemotions715_phi_smoke": {
+   "location": "heba_usb",
+   "n_attempts": 12,
+   "n_intervals": 1,
+   "first_utc": "2026-09-10T17:56:56.126799",
+   "last_utc": "2026-09-10T17:58:59.520306"
+  },
+  "bench_013_dreaddit_gemma_fp4_reliability": {
+   "location": "heba_usb",
+   "n_attempts": 60,
+   "n_intervals": 1,
+   "first_utc": "2026-09-12T22:37:41.792809",
+   "last_utc": "2026-09-12T22:51:35.174874"
+  },
+  "bench_014_dreaddit_gemma_fp4_recheck": {
+   "location": "heba_usb",
+   "n_attempts": 60,
+   "n_intervals": 1,
+   "first_utc": "2026-09-13T23:21:35.118813",
+   "last_utc": "2026-09-13T23:31:42.101974"
+  },
+  "bench_016_dreaddit_gemma_fp4_coreweave": {
+   "location": "heba_usb",
+   "n_attempts": 60,
+   "n_intervals": 1,
+   "first_utc": "2026-09-15T02:56:35.939113",
+   "last_utc": "2026-09-15T03:05:55.061261"
+  },
+  "bench_017_dreaddit_gemma_fp4_coreweave_w2": {
+   "location": "heba_usb",
+   "n_attempts": 120,
+   "n_intervals": 1,
+   "first_utc": "2026-09-15T03:18:11.663339",
+   "last_utc": "2026-09-15T03:35:49.406616"
+  },
+  "pub_003_dreaddit_llama": {
+   "location": "heba_usb",
+   "n_attempts": 10875,
+   "n_intervals": 3,
+   "first_utc": "2026-09-06T15:19:16.854438",
+   "last_utc": "2026-09-08T09:01:03.707877"
+  },
+  "pub_004_dreaddit_gemma": {
+   "location": "heba_usb",
+   "n_attempts": 5679,
+   "n_intervals": 3,
+   "first_utc": "2026-09-06T17:49:15.202987",
+   "last_utc": "2026-09-13T22:52:12.989486"
+  },
+  "pub_007_goemotions715_qwen": {
+   "location": "heba_usb",
+   "n_attempts": 9417,
+   "n_intervals": 2,
+   "first_utc": "2026-09-09T19:24:49.503954",
+   "last_utc": "2026-09-10T17:08:23.169450"
+  },
+  "pub_008_goemotions715_phi": {
+   "location": "heba_usb",
+   "n_attempts": 9412,
+   "n_intervals": 2,
+   "first_utc": "2026-09-10T18:03:43.973267",
+   "last_utc": "2026-09-12T22:22:51.614306"
+  },
+  "pub_011_dreaddit_gemma_coreweave": {
+   "location": "heba_usb",
+   "n_attempts": 10847,
+   "n_intervals": 2,
+   "first_utc": "2026-09-15T04:42:32.682395",
+   "last_utc": "2026-09-17T03:14:28.121355"
+  }
+ }
+}
