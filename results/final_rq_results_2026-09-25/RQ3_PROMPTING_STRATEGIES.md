@@ -5,13 +5,13 @@ Tables: `tables/rq3_accuracy.csv`, `tables/rq3_macro_f1.csv` (30 rows each),
 
 ## The headline methodological fact
 
-**The frozen inferential package contains no strategy-vs-strategy hypothesis.** Its six Holm families are
+**The frozen inferential package contains no strategy-vs-strategy hypothesis.** **This document is superseded in part — see `SUPERSEDED.md`:** a later post-hoc analysis, `results/rq3_strategy_inference_2026-09-25/`, does test strategy contrasts. Its six Holm families are
 `RQ1-primary-{dreaddit,goemotions}`, `RQ1-mcnemar-{dreaddit,goemotions}` and
 `RQ2-primary-{dreaddit,goemotions}`; all RQ1 comparisons are model-vs-model **within one strategy**, and the
 statistical plan states verbatim: *"RQ3. No inference."* Validation check 7 enumerates the families and
 confirms this.
 
-Consequently **every statement in this document about one prompting strategy versus another is descriptive.**
+Consequently **every statement in this document about one prompting strategy versus another is descriptive.** For tested strategy contrasts, see `SUPERSEDED.md`.
 What *is* available for strategy comparison:
 
 | Available | Not available |
@@ -91,8 +91,8 @@ Two distinct disagreements, and they point in opposite directions:
    p = 0.012) but not on effective accuracy (p = 0.146).
 2. **On GoEmotions, accuracy separates 21 of 30 pairs and macro-F1 separates none.** Only 3 of 30 reach raw
    p < 0.05 (2 under zero-shot, 1 under one-shot-CoT, 0 under zero-shot-CoT) and only 2 have a CI excluding
-   zero. Every GoEmotions macro-F1 CI is roughly 0.45–0.67 wide, because the class supports per run are
-   487 / 81 / 34 / 15 / 6 and six `anxiety` items carry one fifth of the metric.
+   zero. Every GoEmotions macro-F1 CI is roughly 0.45–0.67 wide, because the class supports on the attributable pool are
+   487 / 81 / 33 / 15 / 6 and six `anxiety` items carry one fifth of the metric.
 
 **Consequence for the paper: a strategy must not be called "better" on the strength of an accuracy number.**
 Within-model, the accuracy-optimal and the macro-F1-optimal strategy disagree for **2 of the 10 model ×
@@ -116,7 +116,7 @@ explicit "not tested" flag — is in `tables/rq3_accuracy.csv` and `tables/rq3_m
 `tables/rq3_inferential.csv` records, per dataset × strategy × metric: the frozen family name, the family
 size, how many pairs reach raw p < 0.05, how many have a CI excluding zero, how many survive Holm, the minimum
 Holm p, what the test actually tests, and the constant value
-`strategy_vs_strategy_test_available = "NONE in the frozen inferential package"`.
+`strategy_vs_strategy_test_available = "NONE in the frozen inferential package"`. That column describes the frozen 2026-09-21 package only and is still accurate; see `SUPERSEDED.md`.
 
 ## What RQ3 can and cannot claim
 
@@ -129,7 +129,7 @@ Holm p, what the test actually tests, and the constant value
   substantially a formatting effect (the conditional-accuracy drop is less than half the size).
 
 **Cannot claim.**
-- That any strategy is statistically better than another. No such test exists in the frozen package.
+- That any strategy is statistically better than another **on the basis of this package**. No such test exists in the frozen package. A later post-hoc analysis — `results/rq3_strategy_inference_2026-09-25/` — does test this; see `SUPERSEDED.md`.
 - That chain-of-thought helps or hurts in general.
 - Any causal attribution: strategy, prompt length and exemplar presence all change together between the three
   conditions, so they cannot be separated in this design.

@@ -161,9 +161,9 @@
   },
   {
    "n": 27,
-   "check": "descriptive_2026-09-21: all 32 files still byte-identical to the 2026-09-21 freeze inventory",
+   "check": "descriptive_2026-09-21: the 32-file 2026-09-21 freeze is accounted for exactly as documented (byte-identical / documented-sanitised / intentionally-undistributed; nothing unexplained)",
    "pass": true,
-   "detail": "32 files, 0 changed"
+   "detail": "exact=9 sanitised=11 absent-by-design=12 unexplained=0"
   },
   {
    "n": 28,
@@ -191,9 +191,9 @@
   },
   {
    "n": 32,
-   "check": "invalid_output_audit_2026-09-25: pre-existing manifest advisory unchanged by this analysis",
+   "check": "invalid_output_audit_2026-09-25: verifies against its own CHECKSUMS.sha256",
    "pass": true,
-   "detail": "2 files still failing that package's own manifest (pre-existing, not caused here): cell_level_invalid_vs_quality.csv, invalid_output_audit_report.md"
+   "detail": "0 mismatches"
   }
  ]
 }

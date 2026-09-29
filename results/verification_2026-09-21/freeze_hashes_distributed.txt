@@ -1,0 +1,39 @@
+# freeze_hashes_distributed.txt
+#
+# DERIVED FILE - this does NOT supersede freeze_hashes_after.txt.
+#
+# freeze_hashes_after.txt is the dated 2026-09-21 attestation over the complete 32-file
+# descriptive_2026-09-21 package. It remains byte-for-byte as issued (sha256
+# 5567988b1fd708fa4a81808c36b728f8a5fa471ffa2822a79d3830d41927ece5), it is identical to freeze_hashes_before.txt,
+# and the source working tree still verifies against it at 32 exact / 0 changed / 0 missing.
+#
+# The 32-file freeze above remains the historical record. This file records what this public
+# repository AS DISTRIBUTED actually ships: 20 of those 32 files, with their current size and
+# sha256, plus one entry marked absent-private. 12 of the 32 are NOT distributed - the 11
+# parsed/*.jsonl intermediates for size, and frozen_grid_manifest.json for privacy, its sanitised
+# public derivative frozen_grid_manifest_public.json being supplied in its place. 11 of the 20
+# present carry a documented run_dir sanitisation. See results/DISTRIBUTION_NOTE.md.
+#
+# generated 2026-09-29   format: sha256  size  ./path   status
+#
+a6dccb77be771860b18b94f3cda3ace539843ad3b5be30d8a9ea90b9cbc4fd95  2492  ./ISSUES_FOR_AUDIT.md  exact
+0e04fd6f5a4d4a44383b5a46fe2d81e46b6f68c2d9a4f6d98aafc7281e7b0140  1387  ./README.md  exact
+96ebe4f0b880d989e796b88a4e8c4be1e7362d89b864c1125afd1c521e70fb91  12349  ./aggregate_five_runs.json  exact
+4242c3634c8939714eb0b7ff25b446783f1747add91c36040a95bf02f1646768  6763  ./aggregate_results.csv  exact
+97c8ca960e0f349dda121515fb45855e9c8787cc8a5cc35a0ce292c1d214a18a  54355767  ./authoritative_records.jsonl  exact
+fcde951f0190441d0e0d6f31fd2dd03021f4c02d7df07161e403ef6410051221  331824  ./cell_metrics.json  exact
+7e5f061d2c526275df3f8251468864ebe1dc27513dab9edb7c8e7d4d649f7a8a  4022  ./code/stage_a_parse.py  exact
+c821692efeb783511a0748624d6a9f2c6e048d159e34f9cf2d3b57a611ad8ff5  13476  ./code/stage_b_compose.py  exact
+fba6a4617558b64bec61cee18e2a0b63e9457a03c6a3d94cd8e1a1916527dfa8  124408  ./frozen_grid_manifest.json  absent-private
+6b3f374a0e76d2c8068c06cc077a2affadd1cd15ac91aab027efeb591efe86ec  45013  ./per_run_results.csv  exact
+fa61d61f53ce98f2f3bf91d795a1857048917106b168b5bdd40f1b8044edecb9  760  ./source_parse_summaries/pub_001_dreaddit_qwen.json  sanitised
+490147ee9d70a7b3be826796f92e84d5a9e6596c88e7cc4d48b76da8c7831340  764  ./source_parse_summaries/pub_002_dreaddit_mistral.json  sanitised
+d0bda2aaa54df46e457c2f1239363fb0e0555f8c7d089eec23bdf20791664328  762  ./source_parse_summaries/pub_003_dreaddit_llama.json  sanitised
+7f27a7365af0a207f80110b37072227c3c460e04e2b08024e63b9584aa743fde  758  ./source_parse_summaries/pub_005_dreaddit_phi.json  sanitised
+97aeeb74435b41b810707a01cf89be367308a216e3272d41ab982860eef35af8  830  ./source_parse_summaries/pub_006_goemotions715_mistral.json  sanitised
+6f75613b59bc0f22a3e344e34661d9cdcbab3b4160f97f29f33bf661b9aa35e0  796  ./source_parse_summaries/pub_007_goemotions715_qwen.json  sanitised
+f00351c17cbd370978e6e1535c1865f4556231dd24fa7317687b9756a3fe1694  850  ./source_parse_summaries/pub_008_goemotions715_phi.json  sanitised
+16b5802f1cde2225fcb405a37c5d18e3edeab3c02c17a0a7849246722ef8e314  852  ./source_parse_summaries/pub_009_goemotions715_llama.json  sanitised
+e5e41b328e64f76954c3e9ea75f64ce7fe73fbcd46c87520ccfc484e60044b29  758  ./source_parse_summaries/pub_011_dreaddit_gemma_coreweave.json  sanitised
+80557558c0c753f3425282cf732257b9fde52fa6c5db448d6d9ddb3782698642  816  ./source_parse_summaries/pub_012_goemotions715_gemma_coreweave.json  sanitised
+514c4bdf541fd4ad642273f2a2822b558bca3ac46d32584dc407af5822867e90  765  ./source_parse_summaries/pub_013_dreaddit_gemma_coreweave_osc_run5.json  sanitised

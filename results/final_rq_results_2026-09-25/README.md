@@ -35,6 +35,9 @@ Every headline number is listed in `result_provenance.csv` with the file and fie
   they do not count as wrong.
 - **`macro_f1`** = unweighted mean over the fixed label list (Dreaddit `[0, 1]`; GoEmotions
   `[anxiety, fear, sadness, frustration, non_distress]`), with per-class F1 = 0 when undefined.
+  Per-class precision, recall and F1 are computed **on valid predictions only**: an invalid output
+  contributes nothing to any class's tp, fp or fn. Effective accuracy and macro-F1 therefore weight
+  invalid outputs differently — see `inferential_2026-09-21/STATISTICAL_ANALYSIS_PLAN.md` § 7.
 - **Five-run value** = mean of the five per-run values ± sample SD (n − 1).
 
 **Effective accuracy is the publication metric.** The frozen statistical plan makes it a primary metric for
@@ -49,10 +52,10 @@ main table".
 | Model vs model, within one dataset and one strategy | **Yes** — paired item-level permutation, bootstrap CI, Holm; plus exact McNemar as a secondary family | `rq1_model_pairs_primary.csv`, `rq1_model_pairs_mcnemar.csv` |
 | Configuration vs majority baseline | **Yes** — paired permutation, bootstrap CI, Holm, McNemar, plus a baseline-choice sensitivity analysis | `rq2_configuration_vs_baseline.csv` |
 | Per-configuration point estimates with CIs | **Yes** — effective accuracy, conditional accuracy, macro-F1 | `configuration_level_ci.csv` |
-| **Prompting strategy vs prompting strategy** | **NO** | nothing — the plan states "RQ3. No inference." |
+| **Prompting strategy vs prompting strategy** | **NO** in the frozen package; tested **post-hoc** later | nothing in the frozen package — the plan states "RQ3. No inference." Tested post-hoc in `rq3_strategy_inference_2026-09-25/`; see `SUPERSEDED.md` |
 | Latency | **NO** | descriptive only, by design (documented confounds) |
 
-Every strategy statement in `RQ3_PROMPTING_STRATEGIES.md` is therefore **descriptive**. Validation check 7
+Every strategy statement in `RQ3_PROMPTING_STRATEGIES.md` is therefore **descriptive** with respect to the frozen package. A later post-hoc analysis does test strategy contrasts — see `SUPERSEDED.md`. Validation check 7
 enumerates the six frozen Holm families and confirms none of them compares strategies.
 
 ## Files
