@@ -12,7 +12,7 @@ The project explores how large language models (LLMs), multi-agent systems, and 
 
 ## What is AnxioSense?
 
-AnxioSense allows a user to provide written text, such as a journal entry or social-media text, for structured analysis.
+AnxioSense allows a user to provide written text, such as a self-assessment entry or social-media text, for structured analysis.
 
 In self-assessment mode, the system can also use responses from the **GAD-7**, a standardized anxiety screening questionnaire.
 
