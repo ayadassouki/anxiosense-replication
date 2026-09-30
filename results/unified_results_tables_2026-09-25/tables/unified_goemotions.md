@@ -15,3 +15,5 @@
 | Qwen3.5 27B | zero-shot | 0.7862 ± 0.0011 | 0.7862 ± 0.0011 | 0.5941 ± 0.0074 | 0.5652 ± 0.0071 | 0.5723 ± 0.0071 | 0 | 0.0000 ± 0.0000 | 7.27 ± 0.56 |
 | Qwen3.5 27B | zero-shot-CoT | 0.7897 ± 0.0021 | 0.7897 ± 0.0021 | 0.6074 ± 0.0042 | 0.5661 ± 0.0079 | 0.5793 ± 0.0060 | 0 | 0.0000 ± 0.0000 | 7.32 ± 0.37 |
 | Qwen3.5 27B | one-shot-CoT | 0.7726 ± 0.0000 | 0.7701 ± 0.0000 | 0.5590 ± 0.0000 | 0.5854 ± 0.0000 | 0.5673 ± 0.0000 | 10 | 0.0032 ± 0.0000 | 7.32 ± 0.33 |
+
+Key observations. Gemma 4 31B zero-shot achieved the highest effective accuracy (0.8196) with 0 invalid outputs. Phi-4 one-shot-CoT illustrates the importance of accounting for invalid outputs: its conditional accuracy was 0.8011, but effective accuracy fell to 0.6730, alongside 499 invalid outputs and substantial run-to-run variability. Mistral Small 4 one-shot-CoT had the lowest mean response time (3.32 s). These values are descriptive; statistical comparisons are reported separately in the inferential analyses.
