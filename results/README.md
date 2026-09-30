@@ -41,7 +41,7 @@ Results are reported as mean ± standard deviation across the five experimental 
 
 RQ1 compares the classification performance of the five evaluated models separately for Dreaddit and GoEmotions.
 
-The analysis considers effective accuracy and macro-F1 as primary performance measures, with additional descriptive classification metrics reported in the unified results tables.
+The analysis uses effective accuracy as the primary accuracy metric, with macro-F1 reported alongside it to characterize performance across classes. Additional descriptive classification metrics are reported in the unified results tables.
 
 Model comparisons and corresponding statistical analyses are available in:
 
