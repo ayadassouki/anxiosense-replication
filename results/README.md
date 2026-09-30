@@ -14,6 +14,31 @@ The evaluation compares five open-weight large language models:
 - Phi-4
 - Qwen 3.5 27B
 
+  ### Model Configuration
+
+All five models were served through OpenRouter with the upstream provider pinned per model. Decoding
+parameters were not set in the frozen experiment configurations and were omitted from outgoing
+requests, so provider defaults applied throughout.
+
+| Model | Model String | API | Upstream Provider (pinned) | Quantization Directive | Context Window | Temperature | Seed | max_tokens | top-p / top-k |
+|---|---|---|---|---|---|---|---|---|---|
+| Gemma 4 31B IT | `google/gemma-4-31b-it` | OpenRouter | **CoreWeave** | fp4 (request directive) | Not recorded | Not explicitly set | Not explicitly set | Not explicitly set | Not explicitly set |
+| Llama 4 Scout | `meta-llama/llama-4-scout` | OpenRouter | DeepInfra | None configured | Not recorded | Not explicitly set | Not explicitly set | Not explicitly set | Not explicitly set |
+| Mistral Small 4 | `mistralai/mistral-small-2603` | OpenRouter | Mistral | None configured | Not recorded | Not explicitly set | Not explicitly set | Not explicitly set | Not explicitly set |
+| Phi-4 | `microsoft/phi-4` | OpenRouter | DeepInfra | None configured | Not recorded | Not explicitly set | Not explicitly set | Not explicitly set | Not explicitly set |
+| Qwen 3.5 27B | `qwen/qwen3.5-27b` | OpenRouter | Alibaba | None configured | Not recorded | Not explicitly set | Not explicitly set | Not explicitly set | Not explicitly set |
+
+Each model was evaluated on both datasets under all three prompting strategies, five runs per
+strategy per dataset. Temperature, seed, `max_tokens` and top-p/top-k were not specified in the
+frozen configurations and were omitted from outgoing requests by the runner, so provider defaults
+applied. The only recorded per-model request deviation is `reasoning={enabled: false}` for
+Qwen 3.5 27B, which is an endpoint control rather than a sampling parameter. Context window was not
+recorded in the experimental artifacts.
+
+Provider stability was verified from the frozen grid: each model shows exactly one upstream provider
+across 19,815 OK records (5 × 19,815 = 99,075 attributable records), so no model changed provider
+between runs.
+
 Three prompting strategies were evaluated:
 
 - Zero-shot
