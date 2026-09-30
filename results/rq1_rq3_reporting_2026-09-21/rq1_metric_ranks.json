@@ -1,0 +1,879 @@
+{
+ "dreaddit": {
+  "acc_cond": {
+   "top3_cells": [
+    [
+     "0.752",
+     "Llama 4 Scout",
+     "zero-shot"
+    ],
+    [
+     "0.752",
+     "Llama 4 Scout",
+     "one-shot-cot"
+    ],
+    [
+     "0.745",
+     "Phi-4",
+     "zero-shot"
+    ]
+   ],
+   "bottom3_cells": [
+    [
+     "0.661",
+     "Mistral Small 4",
+     "zero-shot-cot"
+    ],
+    [
+     "0.653",
+     "Qwen3.5 27B",
+     "zero-shot-cot"
+    ],
+    [
+     "0.648",
+     "Qwen3.5 27B",
+     "one-shot-cot"
+    ]
+   ],
+   "top_model_per_strategy": {
+    "zero-shot": "Llama 4 Scout",
+    "zero-shot-cot": "Llama 4 Scout",
+    "one-shot-cot": "Llama 4 Scout"
+   },
+   "model_mean_over_strategies_rank": [
+    [
+     "Llama 4 Scout",
+     "0.750"
+    ],
+    [
+     "Phi-4",
+     "0.728"
+    ],
+    [
+     "Gemma 4 31B",
+     "0.681"
+    ],
+    [
+     "Mistral Small 4",
+     "0.674"
+    ],
+    [
+     "Qwen3.5 27B",
+     "0.664"
+    ]
+   ]
+  },
+  "acc_eff": {
+   "top3_cells": [
+    [
+     "0.750",
+     "Llama 4 Scout",
+     "one-shot-cot"
+    ],
+    [
+     "0.733",
+     "Llama 4 Scout",
+     "zero-shot-cot"
+    ],
+    [
+     "0.730",
+     "Phi-4",
+     "one-shot-cot"
+    ]
+   ],
+   "bottom3_cells": [
+    [
+     "0.661",
+     "Mistral Small 4",
+     "zero-shot-cot"
+    ],
+    [
+     "0.647",
+     "Qwen3.5 27B",
+     "one-shot-cot"
+    ],
+    [
+     "0.602",
+     "Qwen3.5 27B",
+     "zero-shot-cot"
+    ]
+   ],
+   "top_model_per_strategy": {
+    "zero-shot": "Llama 4 Scout",
+    "zero-shot-cot": "Llama 4 Scout",
+    "one-shot-cot": "Llama 4 Scout"
+   },
+   "model_mean_over_strategies_rank": [
+    [
+     "Llama 4 Scout",
+     "0.738"
+    ],
+    [
+     "Phi-4",
+     "0.717"
+    ],
+    [
+     "Gemma 4 31B",
+     "0.681"
+    ],
+    [
+     "Mistral Small 4",
+     "0.674"
+    ],
+    [
+     "Qwen3.5 27B",
+     "0.647"
+    ]
+   ]
+  },
+  "macro_f1": {
+   "top3_cells": [
+    [
+     "0.752",
+     "Llama 4 Scout",
+     "zero-shot"
+    ],
+    [
+     "0.751",
+     "Llama 4 Scout",
+     "one-shot-cot"
+    ],
+    [
+     "0.744",
+     "Phi-4",
+     "zero-shot"
+    ]
+   ],
+   "bottom3_cells": [
+    [
+     "0.631",
+     "Mistral Small 4",
+     "zero-shot-cot"
+    ],
+    [
+     "0.610",
+     "Qwen3.5 27B",
+     "one-shot-cot"
+    ],
+    [
+     "0.598",
+     "Qwen3.5 27B",
+     "zero-shot-cot"
+    ]
+   ],
+   "top_model_per_strategy": {
+    "zero-shot": "Llama 4 Scout",
+    "zero-shot-cot": "Llama 4 Scout",
+    "one-shot-cot": "Llama 4 Scout"
+   },
+   "model_mean_over_strategies_rank": [
+    [
+     "Llama 4 Scout",
+     "0.748"
+    ],
+    [
+     "Phi-4",
+     "0.723"
+    ],
+    [
+     "Gemma 4 31B",
+     "0.659"
+    ],
+    [
+     "Mistral Small 4",
+     "0.648"
+    ],
+    [
+     "Qwen3.5 27B",
+     "0.628"
+    ]
+   ]
+  },
+  "macro_p": {
+   "top3_cells": [
+    [
+     "0.760",
+     "Gemma 4 31B",
+     "zero-shot"
+    ],
+    [
+     "0.758",
+     "Llama 4 Scout",
+     "one-shot-cot"
+    ],
+    [
+     "0.758",
+     "Mistral Small 4",
+     "zero-shot"
+    ]
+   ],
+   "bottom3_cells": [
+    [
+     "0.747",
+     "Phi-4",
+     "one-shot-cot"
+    ],
+    [
+     "0.747",
+     "Qwen3.5 27B",
+     "zero-shot-cot"
+    ],
+    [
+     "0.742",
+     "Phi-4",
+     "zero-shot-cot"
+    ]
+   ],
+   "top_model_per_strategy": {
+    "zero-shot": "Gemma 4 31B",
+    "zero-shot-cot": "Gemma 4 31B",
+    "one-shot-cot": "Llama 4 Scout"
+   },
+   "model_mean_over_strategies_rank": [
+    [
+     "Gemma 4 31B",
+     "0.757"
+    ],
+    [
+     "Mistral Small 4",
+     "0.756"
+    ],
+    [
+     "Llama 4 Scout",
+     "0.755"
+    ],
+    [
+     "Qwen3.5 27B",
+     "0.754"
+    ],
+    [
+     "Phi-4",
+     "0.747"
+    ]
+   ]
+  },
+  "macro_r": {
+   "top3_cells": [
+    [
+     "0.753",
+     "Llama 4 Scout",
+     "one-shot-cot"
+    ],
+    [
+     "0.753",
+     "Llama 4 Scout",
+     "zero-shot"
+    ],
+    [
+     "0.746",
+     "Phi-4",
+     "zero-shot"
+    ]
+   ],
+   "bottom3_cells": [
+    [
+     "0.666",
+     "Mistral Small 4",
+     "zero-shot-cot"
+    ],
+    [
+     "0.653",
+     "Qwen3.5 27B",
+     "one-shot-cot"
+    ],
+    [
+     "0.634",
+     "Qwen3.5 27B",
+     "zero-shot-cot"
+    ]
+   ],
+   "top_model_per_strategy": {
+    "zero-shot": "Llama 4 Scout",
+    "zero-shot-cot": "Llama 4 Scout",
+    "one-shot-cot": "Llama 4 Scout"
+   },
+   "model_mean_over_strategies_rank": [
+    [
+     "Llama 4 Scout",
+     "0.750"
+    ],
+    [
+     "Phi-4",
+     "0.730"
+    ],
+    [
+     "Gemma 4 31B",
+     "0.685"
+    ],
+    [
+     "Mistral Small 4",
+     "0.678"
+    ],
+    [
+     "Qwen3.5 27B",
+     "0.661"
+    ]
+   ]
+  },
+  "evaluability": {
+   "top3_cells": [
+    [
+     "1.000",
+     "Mistral Small 4",
+     "one-shot-cot"
+    ],
+    [
+     "1.000",
+     "Gemma 4 31B",
+     "zero-shot-cot"
+    ],
+    [
+     "1.000",
+     "Gemma 4 31B",
+     "zero-shot"
+    ]
+   ],
+   "bottom3_cells": [
+    [
+     "0.970",
+     "Phi-4",
+     "zero-shot"
+    ],
+    [
+     "0.970",
+     "Llama 4 Scout",
+     "zero-shot"
+    ],
+    [
+     "0.923",
+     "Qwen3.5 27B",
+     "zero-shot-cot"
+    ]
+   ],
+   "top_model_per_strategy": {
+    "zero-shot": "Gemma 4 31B",
+    "zero-shot-cot": "Gemma 4 31B",
+    "one-shot-cot": "Mistral Small 4"
+   },
+   "model_mean_over_strategies_rank": [
+    [
+     "Gemma 4 31B",
+     "1.000"
+    ],
+    [
+     "Mistral Small 4",
+     "1.000"
+    ],
+    [
+     "Phi-4",
+     "0.986"
+    ],
+    [
+     "Llama 4 Scout",
+     "0.984"
+    ],
+    [
+     "Qwen3.5 27B",
+     "0.973"
+    ]
+   ]
+  },
+  "cells_below_baseline_acc_cond": [],
+  "cells_below_baseline_acc_eff": [],
+  "range": {
+   "acc_cond": [
+    "0.648",
+    "0.752"
+   ],
+   "acc_eff": [
+    "0.602",
+    "0.750"
+   ],
+   "macro_f1": [
+    "0.598",
+    "0.752"
+   ],
+   "evaluability": [
+    "0.923",
+    "1.000"
+   ]
+  }
+ },
+ "goemotions": {
+  "acc_cond": {
+   "top3_cells": [
+    [
+     "0.820",
+     "Gemma 4 31B",
+     "zero-shot"
+    ],
+    [
+     "0.817",
+     "Gemma 4 31B",
+     "zero-shot-cot"
+    ],
+    [
+     "0.815",
+     "Gemma 4 31B",
+     "one-shot-cot"
+    ]
+   ],
+   "bottom3_cells": [
+    [
+     "0.746",
+     "Mistral Small 4",
+     "zero-shot-cot"
+    ],
+    [
+     "0.728",
+     "Llama 4 Scout",
+     "zero-shot-cot"
+    ],
+    [
+     "0.727",
+     "Llama 4 Scout",
+     "zero-shot"
+    ]
+   ],
+   "top_model_per_strategy": {
+    "zero-shot": "Gemma 4 31B",
+    "zero-shot-cot": "Gemma 4 31B",
+    "one-shot-cot": "Gemma 4 31B"
+   },
+   "model_mean_over_strategies_rank": [
+    [
+     "Gemma 4 31B",
+     "0.817"
+    ],
+    [
+     "Phi-4",
+     "0.798"
+    ],
+    [
+     "Qwen3.5 27B",
+     "0.783"
+    ],
+    [
+     "Mistral Small 4",
+     "0.767"
+    ],
+    [
+     "Llama 4 Scout",
+     "0.741"
+    ]
+   ]
+  },
+  "acc_eff": {
+   "top3_cells": [
+    [
+     "0.820",
+     "Gemma 4 31B",
+     "zero-shot"
+    ],
+    [
+     "0.817",
+     "Gemma 4 31B",
+     "zero-shot-cot"
+    ],
+    [
+     "0.813",
+     "Gemma 4 31B",
+     "one-shot-cot"
+    ]
+   ],
+   "bottom3_cells": [
+    [
+     "0.700",
+     "Llama 4 Scout",
+     "zero-shot"
+    ],
+    [
+     "0.683",
+     "Llama 4 Scout",
+     "zero-shot-cot"
+    ],
+    [
+     "0.673",
+     "Phi-4",
+     "one-shot-cot"
+    ]
+   ],
+   "top_model_per_strategy": {
+    "zero-shot": "Gemma 4 31B",
+    "zero-shot-cot": "Gemma 4 31B",
+    "one-shot-cot": "Gemma 4 31B"
+   },
+   "model_mean_over_strategies_rank": [
+    [
+     "Gemma 4 31B",
+     "0.817"
+    ],
+    [
+     "Qwen3.5 27B",
+     "0.782"
+    ],
+    [
+     "Mistral Small 4",
+     "0.763"
+    ],
+    [
+     "Phi-4",
+     "0.724"
+    ],
+    [
+     "Llama 4 Scout",
+     "0.705"
+    ]
+   ]
+  },
+  "macro_f1": {
+   "top3_cells": [
+    [
+     "0.594",
+     "Mistral Small 4",
+     "one-shot-cot"
+    ],
+    [
+     "0.593",
+     "Gemma 4 31B",
+     "zero-shot"
+    ],
+    [
+     "0.585",
+     "Gemma 4 31B",
+     "one-shot-cot"
+    ]
+   ],
+   "bottom3_cells": [
+    [
+     "0.534",
+     "Phi-4",
+     "zero-shot"
+    ],
+    [
+     "0.530",
+     "Llama 4 Scout",
+     "zero-shot-cot"
+    ],
+    [
+     "0.520",
+     "Llama 4 Scout",
+     "zero-shot"
+    ]
+   ],
+   "top_model_per_strategy": {
+    "zero-shot": "Gemma 4 31B",
+    "zero-shot-cot": "Gemma 4 31B",
+    "one-shot-cot": "Mistral Small 4"
+   },
+   "model_mean_over_strategies_rank": [
+    [
+     "Gemma 4 31B",
+     "0.587"
+    ],
+    [
+     "Qwen3.5 27B",
+     "0.573"
+    ],
+    [
+     "Mistral Small 4",
+     "0.564"
+    ],
+    [
+     "Phi-4",
+     "0.546"
+    ],
+    [
+     "Llama 4 Scout",
+     "0.531"
+    ]
+   ]
+  },
+  "macro_p": {
+   "top3_cells": [
+    [
+     "0.711",
+     "Gemma 4 31B",
+     "zero-shot"
+    ],
+    [
+     "0.709",
+     "Gemma 4 31B",
+     "zero-shot-cot"
+    ],
+    [
+     "0.695",
+     "Gemma 4 31B",
+     "one-shot-cot"
+    ]
+   ],
+   "bottom3_cells": [
+    [
+     "0.517",
+     "Llama 4 Scout",
+     "zero-shot-cot"
+    ],
+    [
+     "0.499",
+     "Mistral Small 4",
+     "zero-shot-cot"
+    ],
+    [
+     "0.497",
+     "Llama 4 Scout",
+     "zero-shot"
+    ]
+   ],
+   "top_model_per_strategy": {
+    "zero-shot": "Gemma 4 31B",
+    "zero-shot-cot": "Gemma 4 31B",
+    "one-shot-cot": "Gemma 4 31B"
+   },
+   "model_mean_over_strategies_rank": [
+    [
+     "Gemma 4 31B",
+     "0.705"
+    ],
+    [
+     "Phi-4",
+     "0.622"
+    ],
+    [
+     "Qwen3.5 27B",
+     "0.587"
+    ],
+    [
+     "Mistral Small 4",
+     "0.545"
+    ],
+    [
+     "Llama 4 Scout",
+     "0.516"
+    ]
+   ]
+  },
+  "macro_r": {
+   "top3_cells": [
+    [
+     "0.633",
+     "Mistral Small 4",
+     "zero-shot-cot"
+    ],
+    [
+     "0.632",
+     "Llama 4 Scout",
+     "zero-shot"
+    ],
+    [
+     "0.623",
+     "Mistral Small 4",
+     "zero-shot"
+    ]
+   ],
+   "bottom3_cells": [
+    [
+     "0.551",
+     "Phi-4",
+     "zero-shot"
+    ],
+    [
+     "0.550",
+     "Phi-4",
+     "one-shot-cot"
+    ],
+    [
+     "0.543",
+     "Gemma 4 31B",
+     "zero-shot-cot"
+    ]
+   ],
+   "top_model_per_strategy": {
+    "zero-shot": "Llama 4 Scout",
+    "zero-shot-cot": "Mistral Small 4",
+    "one-shot-cot": "Llama 4 Scout"
+   },
+   "model_mean_over_strategies_rank": [
+    [
+     "Llama 4 Scout",
+     "0.624"
+    ],
+    [
+     "Mistral Small 4",
+     "0.624"
+    ],
+    [
+     "Qwen3.5 27B",
+     "0.572"
+    ],
+    [
+     "Phi-4",
+     "0.559"
+    ],
+    [
+     "Gemma 4 31B",
+     "0.549"
+    ]
+   ]
+  },
+  "evaluability": {
+   "top3_cells": [
+    [
+     "1.000",
+     "Qwen3.5 27B",
+     "zero-shot-cot"
+    ],
+    [
+     "1.000",
+     "Qwen3.5 27B",
+     "zero-shot"
+    ],
+    [
+     "1.000",
+     "Gemma 4 31B",
+     "zero-shot-cot"
+    ]
+   ],
+   "bottom3_cells": [
+    [
+     "0.939",
+     "Phi-4",
+     "zero-shot"
+    ],
+    [
+     "0.938",
+     "Llama 4 Scout",
+     "zero-shot-cot"
+    ],
+    [
+     "0.840",
+     "Phi-4",
+     "one-shot-cot"
+    ]
+   ],
+   "top_model_per_strategy": {
+    "zero-shot": "Qwen3.5 27B",
+    "zero-shot-cot": "Qwen3.5 27B",
+    "one-shot-cot": "Gemma 4 31B"
+   },
+   "model_mean_over_strategies_rank": [
+    [
+     "Gemma 4 31B",
+     "0.999"
+    ],
+    [
+     "Qwen3.5 27B",
+     "0.999"
+    ],
+    [
+     "Mistral Small 4",
+     "0.995"
+    ],
+    [
+     "Llama 4 Scout",
+     "0.952"
+    ],
+    [
+     "Phi-4",
+     "0.906"
+    ]
+   ]
+  },
+  "cells_below_baseline_acc_cond": [
+   [
+    "Llama 4 Scout",
+    "zero-shot",
+    "0.727"
+   ],
+   [
+    "Llama 4 Scout",
+    "zero-shot-cot",
+    "0.728"
+   ],
+   [
+    "Llama 4 Scout",
+    "one-shot-cot",
+    "0.767"
+   ],
+   [
+    "Mistral Small 4",
+    "zero-shot",
+    "0.770"
+   ],
+   [
+    "Mistral Small 4",
+    "zero-shot-cot",
+    "0.746"
+   ],
+   [
+    "Qwen3.5 27B",
+    "one-shot-cot",
+    "0.773"
+   ]
+  ],
+  "cells_below_baseline_acc_eff": [
+   [
+    "Llama 4 Scout",
+    "zero-shot",
+    "0.700"
+   ],
+   [
+    "Llama 4 Scout",
+    "zero-shot-cot",
+    "0.683"
+   ],
+   [
+    "Llama 4 Scout",
+    "one-shot-cot",
+    "0.732"
+   ],
+   [
+    "Mistral Small 4",
+    "zero-shot",
+    "0.766"
+   ],
+   [
+    "Mistral Small 4",
+    "zero-shot-cot",
+    "0.741"
+   ],
+   [
+    "Phi-4",
+    "zero-shot",
+    "0.736"
+   ],
+   [
+    "Phi-4",
+    "zero-shot-cot",
+    "0.762"
+   ],
+   [
+    "Phi-4",
+    "one-shot-cot",
+    "0.673"
+   ],
+   [
+    "Qwen3.5 27B",
+    "one-shot-cot",
+    "0.770"
+   ]
+  ],
+  "range": {
+   "acc_cond": [
+    "0.727",
+    "0.820"
+   ],
+   "acc_eff": [
+    "0.673",
+    "0.820"
+   ],
+   "macro_f1": [
+    "0.520",
+    "0.594"
+   ],
+   "evaluability": [
+    "0.840",
+    "1.000"
+   ]
+  }
+ }
+}

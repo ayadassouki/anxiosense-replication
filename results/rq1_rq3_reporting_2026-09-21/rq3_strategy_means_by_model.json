@@ -1,0 +1,56 @@
+{
+ "dreaddit": {
+  "Gemma 4 31B": {
+   "one-shot-cot": 15.1437,
+   "zero-shot-cot": 13.0979,
+   "zero-shot": 15.0728
+  },
+  "Llama 4 Scout": {
+   "one-shot-cot": 10.2309,
+   "zero-shot-cot": 14.081,
+   "zero-shot": 12.4617
+  },
+  "Phi-4": {
+   "one-shot-cot": 10.1301,
+   "zero-shot-cot": 12.8554,
+   "zero-shot": 12.9116
+  },
+  "Mistral Small 4": {
+   "one-shot-cot": 4.8902,
+   "zero-shot-cot": 5.2521,
+   "zero-shot": 5.3602
+  },
+  "Qwen3.5 27B": {
+   "one-shot-cot": 8.4002,
+   "zero-shot-cot": 8.668,
+   "zero-shot": 9.054
+  }
+ },
+ "goemotions": {
+  "Gemma 4 31B": {
+   "one-shot-cot": 10.0933,
+   "zero-shot-cot": 14.1732,
+   "zero-shot": 11.5373
+  },
+  "Llama 4 Scout": {
+   "one-shot-cot": 10.0026,
+   "zero-shot-cot": 11.0204,
+   "zero-shot": 10.7843
+  },
+  "Phi-4": {
+   "one-shot-cot": 10.6305,
+   "zero-shot-cot": 13.0873,
+   "zero-shot": 13.0677
+  },
+  "Mistral Small 4": {
+   "one-shot-cot": 3.3188,
+   "zero-shot-cot": 3.4285,
+   "zero-shot": 3.9774
+  },
+  "Qwen3.5 27B": {
+   "one-shot-cot": 7.3229,
+   "zero-shot-cot": 7.3213,
+   "zero-shot": 7.274
+  }
+ }
+}

@@ -61,8 +61,33 @@ chk("Freeze timestamp precedes the analysis timestamp", frz["frozen_utc"] <= man
     f"{frz['frozen_utc']} <= {man['created_utc']}")
 
 # 5 -------------------------------------------------------------- inputs unchanged
-ok = all(sha256(RES / k) == v for k, v in man["input_sha256"].items())
-chk("All four frozen input artifacts still match their recorded SHA-256", ok, f"{len(man['input_sha256'])} inputs")
+# One recorded input, frozen_grid_manifest.json, records absolute collection-machine paths in 11
+# run_dir values and is intentionally not distributed (.gitignore; results/DISTRIBUTION_NOTE.md).
+# The historical record in analysis_manifest.json is preserved unchanged as evidence of what was
+# frozen; where the private original is absent, its documented public derivative is verified in its
+# place. The substitution is declared here, never inferred; a missing or altered substitute fails.
+SUBSTITUTED_INPUTS = {   # recorded path -> (distributed substitute, substitute's declared sha256)
+    "descriptive_2026-09-21/frozen_grid_manifest.json":
+        ("descriptive_2026-09-21/frozen_grid_manifest_public.json",
+         "30ad583d7b3af45a3ae62fd182c0a1a575af8a1202ee6d1a7a285b26dce4149e"),
+}
+bad, mode = [], {"direct": 0, "substituted": 0}
+for k, v in man["input_sha256"].items():
+    p = RES / k
+    if p.is_file():
+        if sha256(p) == v: mode["direct"] += 1
+        else: bad.append(f"{k} (present but altered)")
+        continue
+    sub = SUBSTITUTED_INPUTS.get(k)
+    if not sub:
+        bad.append(f"{k} (missing, no declared substitute)")
+        continue
+    q = RES / sub[0]
+    if q.is_file() and sha256(q) == sub[1]: mode["substituted"] += 1
+    else: bad.append(f"{k} -> {sub[0]} (substitute missing or altered)")
+print(f"    NOTE inputs verified directly: {mode['direct']}; via declared public substitute: "
+      f"{mode['substituted']}" + (f"; failures: {bad}" if bad else ""), flush=True)
+chk("All four frozen input artifacts still match their recorded SHA-256", not bad, f"{len(man['input_sha256'])} inputs")
 ok = man["input_sha256"] == json.load(open(INF / "analysis_manifest.json"))["input_sha256"]
 chk("Inputs are byte-identical to those used by the frozen 2026-09-21 inferential analysis", ok)
 
@@ -232,11 +257,65 @@ chk("Every output file matches the SHA-256 recorded in analysis_manifest.json", 
     f"{len(man['output_sha256'])} files, {len(bad)} mismatches")
 
 # 20 ------------------------------------------------------------- nothing outside this directory was modified
-fz_inv = (RES / "verification_2026-09-21" / "freeze_hashes_after.txt")
-lines = [l.split() for l in open(fz_inv) if l.strip()]
-bad = [p for dig, size, p in lines if sha256(DESC / p.lstrip("./")) != dig]
-chk("descriptive_2026-09-21: all 32 files still byte-identical to the 2026-09-21 freeze inventory",
-    not bad, f"{len(lines)} files, {len(bad)} changed")
+# The 2026-09-21 attestation (verification_2026-09-21/freeze_hashes_after.txt) covers all 32 files of
+# descriptive_2026-09-21 and is NOT modified here. This replication repository distributes an
+# intentional, sanitised SUBSET of that package: 11 parsed/*.jsonl intermediates are not distributed,
+# and 11 source_parse_summaries/*.json carry a documented run_dir sanitisation. Every inventory entry
+# must therefore fall into exactly one documented bucket -- anything else is a real finding and fails.
+# Buckets, counts and semantics agree with results/verification_2026-09-21/verify_distributed_subset.py;
+# see results/DISTRIBUTION_NOTE.md and results/verification_2026-09-21/freeze_hashes_distributed.txt.
+FZ_AFTER_SHA256 = "5567988b1fd708fa4a81808c36b728f8a5fa471ffa2822a79d3830d41927ece5"
+fz_inv  = (RES / "verification_2026-09-21" / "freeze_hashes_after.txt")
+fz_dist = (RES / "verification_2026-09-21" / "freeze_hashes_distributed.txt")
+
+def _inv20(path, with_status=False):
+    out = {}
+    for l in open(path, encoding="utf-8"):
+        if l.startswith("#") or not l.strip():
+            continue
+        f = l.split()
+        if len(f) >= 3 and len(f[0]) == 64 and f[1].isdigit():
+            rel = f[2][2:] if f[2].startswith("./") else f[2]
+            out[rel] = (f[0].lower(), int(f[1]),
+                        f[3].lower() if with_status and len(f) > 3 else "")
+    return out
+
+def _cur20(p):                                  # None <=> the file is not distributed here
+    return (sha256(p), p.stat().st_size) if p.is_file() else None
+
+frozen20 = _inv20(fz_inv)
+dist20   = _inv20(fz_dist, with_status=True) if fz_dist.is_file() else {}
+b20 = {"exact": [], "sanitised": [], "absent": [], "unexplained": []}
+for rel, (dig, sz, _) in frozen20.items():
+    cur, dd = _cur20(DESC / rel), dist20.get(rel)
+    if dd and dd[2] == "absent-private":
+        # Intentionally not distributed for privacy. Counted absent in EVERY environment so the
+        # partition is identical in a public clone and in the author's working tree; when the
+        # private original IS present it is still verified against the 2026-09-21 inventory.
+        if cur is None or cur == (dig, sz):
+            b20["absent"].append(rel)
+        else:
+            b20["unexplained"].append(rel + " (private original altered)")
+    elif cur == (dig, sz):
+        b20["exact"].append(rel)
+    elif cur is not None and dd and dd[2] == "sanitised" and cur == (dd[0], dd[1]):
+        b20["sanitised"].append(rel)
+    elif cur is None and not dd and rel.startswith("parsed/") and rel.endswith(".jsonl"):
+        b20["absent"].append(rel)
+    else:
+        b20["unexplained"].append(rel)
+b20["unexplained"] += [r for r in dist20 if r not in frozen20]
+n20 = {k: len(v) for k, v in b20.items()}
+ok20 = (not b20["unexplained"]
+        and len(frozen20) == 32 and sum(n20.values()) == 32
+        and (n20["exact"], n20["sanitised"], n20["absent"]) == (9, 11, 12)
+        and sha256(fz_inv) == FZ_AFTER_SHA256)
+chk("descriptive_2026-09-21: the 32-file 2026-09-21 freeze is accounted for exactly as documented "
+    "(byte-identical / documented-sanitised / intentionally-undistributed; nothing unexplained)",
+    ok20,
+    f"exact={n20['exact']} sanitised={n20['sanitised']} absent-by-design={n20['absent']} "
+    f"unexplained={n20['unexplained']}"
+    + (f" {b20['unexplained'][:5]}" if b20["unexplained"] else ""))
 for pkg in ("inferential_2026-09-21", "final_rq_results_2026-09-25", "unified_results_tables_2026-09-25",
             "rq3_inference_design_2026-09-25"):
     d = RES / pkg
@@ -251,15 +330,15 @@ for pkg in ("inferential_2026-09-21", "final_rq_results_2026-09-25", "unified_re
     else:
         chk(f"{pkg}: present and untouched by this analysis (no manifest of its own to verify)", d.exists(),
             "read-only access only")
-# the one pre-existing advisory, reported not hidden
+# this package's own manifest; its report-checksum entry was corrected 2026-09-29 (see that
+# package's VALIDATION.md), so it must now verify completely
 adv = RES / "invalid_output_audit_2026-09-25" / "CHECKSUMS.sha256"
 badv = []
 for l in open(adv):
     dig, p = l.strip().split(None, 1); p = p.lstrip("*").lstrip()
     if (adv.parent / p).exists() and sha256(adv.parent / p) != dig: badv.append(p)
-chk("invalid_output_audit_2026-09-25: pre-existing manifest advisory unchanged by this analysis",
-    len(badv) == 2, f"{len(badv)} files still failing that package's own manifest (pre-existing, not caused here): "
-    + ", ".join(sorted(badv)))
+chk("invalid_output_audit_2026-09-25: verifies against its own CHECKSUMS.sha256",
+    not badv, f"{len(badv)} mismatches" + (": " + ", ".join(sorted(badv)) if badv else ""))
 
 # ---------------------------------------------------------------- write
 n_pass = sum(c["pass"] for c in checks)
@@ -273,6 +352,41 @@ L = ["# Validation — RQ3 strategy inference (2026-09-25)", "",
      "| # | Check | Result | Detail |", "|---|---|---|---|"]
 for c in checks:
     L.append(f"| {c['n']} | {c['check']} | {'PASS' if c['pass'] else '**FAIL**'} | {c['detail']} |")
+L += ["",
+ "## Post-freeze replication-package fix (B6b), 2026-09-29",
+ "",
+ "Two checks above were repaired after the 2026-09-25 freeze. Neither changes the analysis: no",
+ "frozen analysis code, preregistration artifact, input, draw, table, replicate or statistical",
+ "output was modified, as checks 4-10 and 26 in the table above re-verify on every run.",
+ "",
+ "Check 20 previously hashed all 32 entries of the 2026-09-21 descriptive freeze inventory",
+ "unconditionally. This replication repository distributes an intentional, sanitised subset of that",
+ "package: 11 `parsed/*.jsonl` intermediates are not distributed, so on a fresh clone the check",
+ "raised `FileNotFoundError` and the checks after it never ran. It now partitions all 32 inventory",
+ "entries into byte-identical, documented-sanitised and intentionally-undistributed using",
+ "`results/verification_2026-09-21/freeze_hashes_distributed.txt`, and fails on anything",
+ "unexplained, on a wrong bucket count, or if the 2026-09-21 attestation itself is modified. It",
+ "agrees with `results/verification_2026-09-21/verify_distributed_subset.py`; both report",
+ "9 / 11 / 12 / 0 - nine byte-identical, eleven documented-sanitised, and twelve absent by design:",
+ "the 11 parsed/*.jsonl intermediates (size) and frozen_grid_manifest.json (privacy). See",
+ "`results/DISTRIBUTION_NOTE.md`. The pre-fix `code/02_validate.py` was",
+ "`9b0150e23c93bae180a64780154ba7c31d9e9f8a4f790aaff1ccf36faa5c883f`.",
+ "",
+ "Check 32 previously asserted that the sibling package `invalid_output_audit_2026-09-25` had",
+ "exactly two manifest discrepancies. Both have since been diagnosed and resolved - the model-label",
+ "join repair (B2) and the `invalid_output_audit_report.md` manifest correction of 2026-09-29,",
+ "documented in that package's own `VALIDATION.md` - so the check now requires that package to",
+ "verify against its own `CHECKSUMS.sha256`.",
+ "",
+ "Check 7 verifies the four recorded input artifacts. `frozen_grid_manifest.json` is intentionally",
+ "not distributed for privacy; where it is absent, the declared public derivative",
+ "`frozen_grid_manifest_public.json` is verified against its own recorded hash in its place, and the",
+ "run prints which inputs were verified directly and which via the substitute. The historical",
+ "records continue to name the private manifest, unchanged.",
+ "",
+ "This section is emitted by `code/02_validate.py`. `VALIDATION.md` is regenerated in full on every",
+ "run and must not be edited by hand.",
+]
 open(OUT / "VALIDATION.md", "w").write("\n".join(L) + "\n")
 print(f"\n{n_pass}/{len(checks)} checks passed")
 sys.exit(0 if n_pass == len(checks) else 1)

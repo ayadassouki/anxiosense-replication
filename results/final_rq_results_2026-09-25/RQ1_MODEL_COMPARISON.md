@@ -106,7 +106,7 @@ on macro-F1.**
 This is the single most important RQ1 caveat. On GoEmotions, no model pair is distinguishable on macro-F1
 after Holm correction: only 3 of 30 pairs reach raw p < 0.05, and only 2 have a CI excluding zero. The cause
 is visible in the CI widths above — every macro-F1 CI spans roughly 0.45–0.67, because macro-F1 is an
-unweighted mean over five classes and the class supports are 487 / 81 / 34 / 15 / **6** per run. Six `anxiety`
+unweighted mean over five classes and the class supports on the attributable pool are 487 / 81 / 33 / 15 / **6**. Six `anxiety`
 items drive one fifth of the metric.
 
 | Configuration | Holm-sig wins / losses, eff. acc | Holm-sig wins / losses, macro-F1 |

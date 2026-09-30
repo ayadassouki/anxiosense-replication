@@ -1,0 +1,19 @@
+{
+  "source_run": "pub_001_dreaddit_qwen",
+  "run_dir": "external_run_evidence/pub_001_dreaddit_qwen",
+  "parser_version": "1.0.0",
+  "index_lines": 10725,
+  "final_assessments": 10725,
+  "attempt_lines": 10726,
+  "terminal_attempts_resolved": 10725,
+  "terminal_attempts_missing": 0,
+  "parse_status_counts": {
+    "ok": 10205,
+    "safety_intercept": 240,
+    "unparseable": 280
+  },
+  "raw_index_sha256": "c7acc64f9002c2973d38c7baf88d32a0fcb1c2eeae05f56e5af9ac8b530db5e7",
+  "raw_attempts_sha256": "9ae3a57fdf617f71223afba5cc4e0f5ec97db513df008661020781d968b627ac",
+  "experiment_json_sha256": "e138e406258fb0178f4bb3d8fed2743f1802d566b42c09d9d2e2db678c32188b",
+  "parsed_output_sha256": "2d869b57c13650dcd990c7d28229dc4c4b4531525b3667f88c3a4d6ee9ad874f"
+}

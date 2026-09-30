@@ -83,8 +83,10 @@ These are documented in the frozen reporting package and are the reason the stat
 3. **Model is confounded with serving provider** (Mistral 3.3–5.4 s on the Mistral API versus Gemma
    10.1–15.1 s on CoreWeave). Cross-model latency comparisons say as much about infrastructure as about the
    model.
-4. **Concurrent load.** `share_during_other_run_on_same_machine` is 1.00 for Llama/Dreaddit zero-shot-CoT and
-   0.82 for Llama/Dreaddit zero-shot — those cells ran while another run shared the host.
+4. **Concurrent load.** `share_during_other_run_on_same_machine` is 1.00 for Llama/Dreaddit one-shot-CoT,
+   1.00 for zero-shot-CoT and 0.82 for zero-shot — **all three** Llama Dreaddit configurations ran while
+   another run shared the host (pub_004, Gemma via DeepInfra, not part of the grid). In per-run terms that
+   is 15 of 15 Llama Dreaddit cells and 10,072 of 10,725 terminal attempts.
 5. **Run-to-run drift.** Gemma Dreaddit one-shot-CoT has per-run means of 16.88, 20.29, 14.37, 10.09 and
    14.08 s.
 6. **No per-agent timing, no time-to-first-token, no cost.**

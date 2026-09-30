@@ -1,0 +1,5 @@
+{
+ "0.167": "1/6, arithmetic on the 6 anxiety items",
+ "0.488": "ROUND_HALF_UP(0.4875), documented half-boundary case from verification",
+ "99.97": "99,049/99,075 from rq3 extract (percentage)"
+}

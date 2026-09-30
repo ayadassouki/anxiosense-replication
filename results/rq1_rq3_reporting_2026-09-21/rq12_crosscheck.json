@@ -1,0 +1,7 @@
+{
+ "checks": 4457,
+ "exact": 3811,
+ "known_last_ulp_float": 646,
+ "problems": [],
+ "rounding_notes": []
+}

@@ -16,15 +16,28 @@ for r in rows:
     k = (r["dataset"], r["model_short"], r["strategy"])
     uniq[k].add(r["sample_id"]); cat[k][r["primary_failure_category"]] += 1
 
+# The frozen rq1_rq3_tables use display labels that differ from the row-level
+# `model_short` vocabulary for two of the five models ("Gemma 4 31B IT" vs
+# "Gemma 4 31B"; "Qwen 3.5 27B" vs "Qwen3.5 27B"). Canonicalise the table labels
+# onto the row-level vocabulary so the join matches. Explicit rather than fuzzy,
+# and fail-closed: an unmapped label raises KeyError instead of silently
+# returning a zero count.
+TABLE_MODEL_TO_SHORT = {
+    "Gemma 4 31B IT":  "Gemma 4 31B",
+    "Qwen 3.5 27B":    "Qwen3.5 27B",
+    "Llama 4 Scout":   "Llama 4 Scout",
+    "Mistral Small 4": "Mistral Small 4",
+    "Phi-4":           "Phi-4",
+}
 lat = {}
 for r in csv.DictReader(open(f"{TAB}/04_latency_results.csv", encoding="utf-8")):
-    lat[(r["dataset"], r["model"], r["strategy"])] = r["client_latency_mean_s"]
+    lat[(r["dataset"], TABLE_MODEL_TO_SHORT[r["model"]], r["strategy"])] = r["client_latency_mean_s"]
 
 ATT = {"dreaddit": 3495, "goemotions": 3110}
 out = []
 for ds, f in [("dreaddit", "02_dreaddit_results.csv"), ("goemotions", "03_goemotions_results.csv")]:
     for r in csv.DictReader(open(f"{TAB}/{f}", encoding="utf-8")):
-        k = (ds, r["model"], r["prompt_strategy"])
+        k = (ds, TABLE_MODEL_TO_SHORT[r["model"]], r["prompt_strategy"])
         n = inv.get(k, 0)
         top = cat[k].most_common(1)
         out.append({

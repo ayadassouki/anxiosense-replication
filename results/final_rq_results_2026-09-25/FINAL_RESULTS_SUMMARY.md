@@ -30,7 +30,7 @@ see `INVALID_OUTPUT_SELECTION_EFFECT.md`.
 | Model pairs Holm-significant, macro-F1 | 20 / 30 | **0 / 30** |
 
 **No model leads both datasets.** On GoEmotions macro-F1 no model pair separates at all — the class supports
-per run are 487 / 81 / 34 / 15 / 6, so six `anxiety` items carry a fifth of the metric and every CI spans
+on the attributable pool are 487 / 81 / 33 / 15 / 6, so six `anxiety` items carry a fifth of the metric and every CI spans
 roughly 0.45–0.67. Llama versus Phi-4 separates in only 1 of 6 Dreaddit comparisons, and on GoEmotions the two
 Holm-significant accuracy comparisons between them point in **opposite directions** depending on strategy.
 
@@ -50,6 +50,13 @@ macro-F1 (0.52–0.59 against a constant predictor's 0.176) is the metric that s
 
 ## RQ3 — prompting strategy
 
+> **SUPERSEDED IN PART — see `SUPERSEDED.md`.** This section was written 2026-09-25 20:44:46Z.
+> A separate **post-hoc / exploratory** analysis was frozen at 22:04:33Z and executed at 22:04:45Z
+> the same day, and it *does* test strategy contrasts: 20 of 60 metric-specific rows are
+> Holm-significant, corresponding to **14 distinct strategy contrasts** (6 significant on both
+> co-primary metrics, 7 on effective accuracy only, 1 on macro-F1 only). The statement below
+> remains true of the **frozen 2026-09-21** package. See `results/rq3_strategy_inference_2026-09-25/` for the tested result.
+
 **No strategy-vs-strategy test exists in the frozen package** (the plan states "RQ3. No inference."), so every
 strategy statement is descriptive. Descriptively, no strategy wins everywhere: one-shot-CoT is best for 2 of 5
 models on Dreaddit and 2 of 5 on GoEmotions; zero-shot is best for 3 of 5 on Dreaddit.
@@ -68,7 +75,7 @@ failure.
 
 End-to-end **client** wall clock for one complete assessment (`latency_ms`), per-run mean, then mean ± SD over
 five runs, in seconds. Available for all 30 configurations. Measurement resolution is **3 s** (poll cadence),
-strategies ran in sequential blocks, model is confounded with serving provider, and two Llama Dreaddit cells
+strategies ran in sequential blocks, model is confounded with serving provider, and **all three** Llama Dreaddit configurations (15 of 15 cells)
 ran under concurrent load. **Nothing about latency was tested.** Display the client mean, not the median — the
 medians sit on the 3 s lattice (Qwen's Dreaddit medians are 9.08 / 9.08 / 9.07 s).
 
@@ -89,7 +96,7 @@ detectable class enrichment; its gap reflects invalid-output *volume*, not *whic
    was pre-designated as the system. Whatever goes in the abstract is a post-hoc choice and must be stated as
    one.
 2. **Decide how RQ3 is defined in the paper.** The frozen plan's RQ3 is *efficiency/latency*; the results
-   question asked here is *prompting strategy*. Neither has an inferential test. If the paper needs tested
+   question asked here is *prompting strategy*. Neither had an inferential test when this was written. A post-hoc analysis has since tested the prompting-strategy reading — see `SUPERSEDED.md` — but it is labelled exploratory, so if the paper needs *confirmatory* tested
    strategy claims, that is a new pre-registered analysis, not a reanalysis.
 3. **The GoEmotions macro-F1 result (0/30 pairs separated)** needs an explicit sentence in the limitations: at
    these class supports the study is not powered to rank models on macro-F1.

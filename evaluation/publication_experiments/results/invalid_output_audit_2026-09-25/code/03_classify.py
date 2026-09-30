@@ -481,7 +481,7 @@ for line in open(f"{WORK}/index.jsonl", encoding="utf-8"):
             raw_available="false", raw_field_name=field, raw_response=UNAVAIL, raw_len="", raw_sha256=UNAVAIL,
             input_text_len="", primary_failure_category=UNAVAIL, secondary_failure_category=UNAVAIL,
             detailed_failure_description=("Raw evidence is on the external volume "
-                                          "/Volumes/Untitled/publication_experiments_from_heba, which is not mounted. "
+                                          "the external run evidence store, which is not mounted. "
                                           "No classification is asserted."),
             human_readable_prediction_present=UNAVAIL, apparent_prediction=UNAVAIL,
             apparent_prediction_in_allowed_vocabulary=UNAVAIL, structurally_recoverable=UNAVAIL,

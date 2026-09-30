@@ -34,9 +34,43 @@ frozen packages are re-hashed.
 | 24 | No pooled strategy main effect and no family spanning both datasets | PASS | every row is one model x one dataset; families are per dataset |
 | 25 | Bootstrap replicates containing no GoEmotions 'anxiety' item are recorded | PASS | 14 of 4000 |
 | 26 | Every output file matches the SHA-256 recorded in analysis_manifest.json | PASS | 12 files, 0 mismatches |
-| 27 | descriptive_2026-09-21: all 32 files still byte-identical to the 2026-09-21 freeze inventory | PASS | 32 files, 0 changed |
+| 27 | descriptive_2026-09-21: the 32-file 2026-09-21 freeze is accounted for exactly as documented (byte-identical / documented-sanitised / intentionally-undistributed; nothing unexplained) | PASS | exact=9 sanitised=11 absent-by-design=12 unexplained=0 |
 | 28 | inferential_2026-09-21: present and untouched by this analysis (no manifest of its own to verify) | PASS | read-only access only |
 | 29 | final_rq_results_2026-09-25: verifies against its own CHECKSUMS.sha256 | PASS | 0 mismatches |
 | 30 | unified_results_tables_2026-09-25: verifies against its own CHECKSUMS.sha256 | PASS | 0 mismatches |
 | 31 | rq3_inference_design_2026-09-25: present and untouched by this analysis (no manifest of its own to verify) | PASS | read-only access only |
-| 32 | invalid_output_audit_2026-09-25: pre-existing manifest advisory unchanged by this analysis | PASS | 2 files still failing that package's own manifest (pre-existing, not caused here): cell_level_invalid_vs_quality.csv, invalid_output_audit_report.md |
+| 32 | invalid_output_audit_2026-09-25: verifies against its own CHECKSUMS.sha256 | PASS | 0 mismatches |
+
+## Post-freeze replication-package fix (B6b), 2026-09-29
+
+Two checks above were repaired after the 2026-09-25 freeze. Neither changes the analysis: no
+frozen analysis code, preregistration artifact, input, draw, table, replicate or statistical
+output was modified, as checks 4-10 and 26 in the table above re-verify on every run.
+
+Check 20 previously hashed all 32 entries of the 2026-09-21 descriptive freeze inventory
+unconditionally. This replication repository distributes an intentional, sanitised subset of that
+package: 11 `parsed/*.jsonl` intermediates are not distributed, so on a fresh clone the check
+raised `FileNotFoundError` and the checks after it never ran. It now partitions all 32 inventory
+entries into byte-identical, documented-sanitised and intentionally-undistributed using
+`results/verification_2026-09-21/freeze_hashes_distributed.txt`, and fails on anything
+unexplained, on a wrong bucket count, or if the 2026-09-21 attestation itself is modified. It
+agrees with `results/verification_2026-09-21/verify_distributed_subset.py`; both report
+9 / 11 / 12 / 0 - nine byte-identical, eleven documented-sanitised, and twelve absent by design:
+the 11 parsed/*.jsonl intermediates (size) and frozen_grid_manifest.json (privacy). See
+`results/DISTRIBUTION_NOTE.md`. The pre-fix `code/02_validate.py` was
+`9b0150e23c93bae180a64780154ba7c31d9e9f8a4f790aaff1ccf36faa5c883f`.
+
+Check 32 previously asserted that the sibling package `invalid_output_audit_2026-09-25` had
+exactly two manifest discrepancies. Both have since been diagnosed and resolved - the model-label
+join repair (B2) and the `invalid_output_audit_report.md` manifest correction of 2026-09-29,
+documented in that package's own `VALIDATION.md` - so the check now requires that package to
+verify against its own `CHECKSUMS.sha256`.
+
+Check 7 verifies the four recorded input artifacts. `frozen_grid_manifest.json` is intentionally
+not distributed for privacy; where it is absent, the declared public derivative
+`frozen_grid_manifest_public.json` is verified against its own recorded hash in its place, and the
+run prints which inputs were verified directly and which via the substitute. The historical
+records continue to name the private manifest, unchanged.
+
+This section is emitted by `code/02_validate.py`. `VALIDATION.md` is regenerated in full on every
+run and must not be edited by hand.

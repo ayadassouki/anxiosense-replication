@@ -1,0 +1,22 @@
+{
+  "source_run": "pub_009_goemotions715_llama",
+  "run_dir": "external_run_evidence/pub_009_goemotions715_llama",
+  "parser_version": "1.0.0",
+  "index_lines": 9480,
+  "final_assessments": 9345,
+  "attempt_lines": 9853,
+  "terminal_attempts_resolved": 9345,
+  "terminal_attempts_missing": 0,
+  "parse_status_counts": {
+    "ok_empty_list": 6621,
+    "out_of_vocabulary": 418,
+    "ok": 2260,
+    "safety_intercept": 15,
+    "fail_unparseable": 29,
+    "fail_truncated": 2
+  },
+  "raw_index_sha256": "2413edb296f010a0104a9f2e7e5ac2c3608f4b33ec9df1040ea4b173a6f805a3",
+  "raw_attempts_sha256": "6fd4ddf67d55a272127dcc1325b23179360c86a2310a4b7dc4bf125162d5a3a1",
+  "experiment_json_sha256": "0cca97c002f00c90bd36087545eb1192ddab8a593fa5e8e833495f7e424aaf83",
+  "parsed_output_sha256": "c77c3eb1f308961975382f126973b485e01f40845616315af49e5e9e563a4d37"
+}
