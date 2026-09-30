@@ -1,14 +1,4 @@
 # Model-invalid output audit — AnxioSense publication experiments
-## AI-Assistance Disclosure
-
-Generative AI tools were used to assist with the development of audit scripts, organization and classification of invalid-output cases, and drafting and editing portions of this report. All quantitative findings reported here were derived from the frozen AnxioSense experimental artifacts and original raw model outputs. Automated classifications were validated against the underlying records, and hallucination candidates were manually reviewed. AI-generated suggestions were not treated as experimental evidence, and the original frozen experimental results were not modified as part of this audit.
-
-**Version 2 (complete coverage), 2026-09-25.** Supersedes the partial version of the same date, which could
-inspect only 937 of 1,986 records. Section L lists every headline finding that changed.
-
-**Status:** READ-ONLY audit. No code, result, parser, prompt, raw file or frozen artifact was modified. No
-experiment was rerun and no model API was called. No output was repaired and then scored: the recoverability
-fields are descriptive and sit *beside* the frozen result, never in place of it.
 
 **Coverage: 1,986 of 1,986 (100%).** Every model-invalid record in the frozen grid is classified from its own
 raw terminal attempt. There are no `RAW_UNAVAILABLE` rows.
@@ -915,3 +905,6 @@ REPO=<repo> WORK=<scratch> OUT=<this dir> \
 RUN_ROOTS="<repo>/evaluation/publication_experiments/runs:<external evidence>/publication_experiments/runs" \
 python3 code/01_build_index.py && … && python3 code/05_validate.py
 ```
+## AI-Assistance Disclosure
+
+Generative AI tools were used to assist with the development of audit scripts, organization and classification of invalid-output cases, and drafting and editing portions of this report. All quantitative findings reported here were derived from the frozen AnxioSense experimental artifacts and original raw model outputs. Automated classifications were validated against the underlying records, and hallucination candidates were manually reviewed. AI-generated suggestions were not treated as experimental evidence, and the original frozen experimental results were not modified as part of this audit.
