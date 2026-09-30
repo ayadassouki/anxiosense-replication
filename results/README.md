@@ -14,19 +14,25 @@ The evaluation compares five open-weight large language models:
 - Phi-4
 - Qwen 3.5 27B
 
-  ### Model Configuration
+### Model Configuration
 
-All five models were served through OpenRouter with the upstream provider pinned per model. Decoding
-parameters were not set in the frozen experiment configurations and were omitted from outgoing
-requests, so provider defaults applied throughout.
+All publication experiments used provider-default decoding rather than a common decoding configuration imposed across models. The upstream provider was pinned per model. The application removed `temperature`, `seed`, `max_tokens`, and `max_completion_tokens` from outgoing requests before dispatch. `top_p` and `top_k` were not configured in the frozen publication configurations. Consequently, the numerical decoding values ultimately applied by the serving endpoints were not recorded in the experimental artifacts.
 
-| Model | Model String | API | Upstream Provider (pinned) | Quantization Directive | Context Window | Temperature | Seed | max_tokens | top-p / top-k |
-|---|---|---|---|---|---|---|---|---|---|
-| Gemma 4 31B IT | `google/gemma-4-31b-it` | OpenRouter | **CoreWeave** | fp4 (request directive) | Not recorded | Not explicitly set | Not explicitly set | Not explicitly set | Not explicitly set |
-| Llama 4 Scout | `meta-llama/llama-4-scout` | OpenRouter | DeepInfra | None configured | Not recorded | Not explicitly set | Not explicitly set | Not explicitly set | Not explicitly set |
-| Mistral Small 4 | `mistralai/mistral-small-2603` | OpenRouter | Mistral | None configured | Not recorded | Not explicitly set | Not explicitly set | Not explicitly set | Not explicitly set |
-| Phi-4 | `microsoft/phi-4` | OpenRouter | DeepInfra | None configured | Not recorded | Not explicitly set | Not explicitly set | Not explicitly set | Not explicitly set |
-| Qwen 3.5 27B | `qwen/qwen3.5-27b` | OpenRouter | Alibaba | None configured | Not recorded | Not explicitly set | Not explicitly set | Not explicitly set | Not explicitly set |
+| Model | Exact Model String | Upstream Provider (Pinned) | Temperature | Generation Seed | Token Limit | top_p / top_k | Other Request Control |
+|---|---|---|---|---|---|---|---|
+| Gemma 4 31B IT | `google/gemma-4-31b-it` | CoreWeave | Not sent (provider default) | Not sent | Not sent (provider default) | Not configured | fp4 request directive |
+| Llama 4 Scout | `meta-llama/llama-4-scout` | DeepInfra | Not sent (provider default) | Not sent | Not sent (provider default) | Not configured | None |
+| Mistral Small 4 | `mistralai/mistral-small-2603` | Mistral | Not sent (provider default) | Not sent | Not sent (provider default) | Not configured | None |
+| Phi-4 | `microsoft/phi-4` | DeepInfra | Not sent (provider default) | Not sent | Not sent (provider default) | Not configured | None |
+| Qwen3.5 27B | `qwen/qwen3.5-27b` | Alibaba | Not sent (provider default) | Not sent | Not sent (provider default) | Not configured | `reasoning: {enabled: false}` |
+
+**Decoding configuration.** The publication evaluation intentionally did not impose common numerical decoding parameters across models. The model-dispatch layer deletes `temperature`, `seed`, `max_tokens`, and `max_completion_tokens` from outgoing request bodies before dispatch, allowing the serving endpoint to determine the corresponding decoding behaviour. This behaviour was introduced before the first run contributing to the frozen publication grid and was present in the code states recorded for the contributing experiments.
+
+The exact numerical values applied server-side are therefore not reported as experimental parameters. The API responses did not echo these settings, and no sampling-parameter fields were found in the inspected raw run evidence. Provider defaults are server-side settings and may differ between endpoints or change over time; therefore, current provider documentation should not be used retrospectively as evidence of the numerical values applied during these experiments.
+
+`top_p` and `top_k` require a separate distinction: neither parameter was configured in the frozen publication configurations, but they were not among the parameters actively removed by the dispatch layer. Qwen3.5 27B additionally received `reasoning: {enabled: false}` as an endpoint-specific request override; this was not treated as a sampling parameter. Gemma 4 31B used a CoreWeave fp4 request directive, which controlled routing/precision rather than decoding.
+
+Each model × prompting-strategy configuration was evaluated five times on each dataset. Run-to-run variability is reported using the mean and standard deviation across these five runs.
 
 Each model was evaluated on both datasets under all three prompting strategies, five runs per
 strategy per dataset. Temperature, seed, `max_tokens` and top-p/top-k were not specified in the
