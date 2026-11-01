@@ -257,7 +257,7 @@ AnxioSense is **not**:
 BSc Computer Science  
 York University
 
-Developed as part of the EECS 4080 undergraduate research project.
+
 
 ---
 
@@ -265,4 +265,4 @@ Developed as part of the EECS 4080 undergraduate research project.
 
 If referencing this project:
 
-> Dassouki, A. (2026). *AnxioSense: A Multi-Agent Retrieval-Augmented Framework for Anxiety Screening Support*. EECS 4080 Undergraduate Research Project, York University.
+> Dassouki, A. (2026). *AnxioSense: A Multi-Agent Retrieval-Augmented Framework for Anxiety Screening Support*. 
